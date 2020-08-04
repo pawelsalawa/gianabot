@@ -7,3 +7,8 @@ It was written entirely in Tcl.
 
 # Home page
 https://salsoft.com.pl/giana/index.rvt (the home page is also from back in time :) )
+
+# Screenshot
+
+![image](https://salsoft.com.pl/giana/shots/shot3.png)
+
