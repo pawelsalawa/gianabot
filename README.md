@@ -10,5 +10,5 @@ https://salsoft.com.pl/giana/index.rvt (the home page is also from back in time 
 
 # Screenshot
 
-![image](https://salsoft.com.pl/giana/shots/shot3.png)
+![image](https://github.com/pawelsalawa/gianabot/raw/master/shot3.png)
 
