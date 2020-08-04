@@ -1,0 +1,76 @@
+                       --==[FAQ]==--
+
+Q: I've unpacked Giana. What now?
+A: Run giana with option -f. It will redirect you to config
+   generator. After that you can simple run bot by
+   ./giana.tcl bot_name
+   It's good idea to look at ./giana.tcl --help
+
+Q: My bot has started. How to add first user?
+A: There are three ways. First way is:
+        Add user while create bot configuration file by command
+        ./giana.tcl -f.
+   Second is:
+        Telnet to bot user port and enter bot name. Then bot
+        will ask you about first user login and password. 
+   Third way is:
+        Start bot with option -i. Then you may add user, change
+        flags and password for him. After that execute command
+        save and kill bot (command die). Then start bot without
+        -i option. Now you may log in as added user.
+
+Q: I've added user but I still can't log in. Bot disconnect me
+   just after I put my login name.
+A: Perhaps you missed 'p' flag for user. Another reason could be
+   very similar login but not the same. Check it for sure.
+
+Q: Everything is correct for sure. Bot still doesn't let me in.
+A: Are you trying to log in by some Windows telnet client?
+   Only putty client has been tested and I don't know if other
+   clients works propertly with Giana2. If you're putty user,
+   change protocol to RAW, instead of TELNET, SSH, or RLOGIN.
+
+Q: What option should I use for save each list?
+A: save -u means save userlist, -b = botlist, -c = chanlist,
+   -s = settings and -a = all lists (= -b -c -u). In userlist
+   are saved users names, hostmasks, global&local flags;
+   In botlist: botnames, addresses, ports, flags, hostmasks,
+   hard links; In chanlist: channels names, flags for channels,
+   keys for channels; In settings: any bot variables.
+
+Q: I've saved users list, but other bots in botnet still don't
+   agree it. Why?
+A: Simple save does it only on local bot. You can use sendlists
+   after that to send saved lists to all, or just use savenet
+   instead of save. Remember that bot with higher priority
+   (lower netflag) always sends lists to bot with lower priority.
+   It can't be inversely.
+
+Q: Is there support for ipv6?
+A: Not yet. It's depended by TCL interpreter. If there will be
+   released TCL with ipv6 support, Giana will be ready for use it
+   (small changes has to be done of course).
+
+Q: Is there way to port eggdrop TCL script to Giana?
+A: Yes, there is. You can read about it in eggtcls file.
+
+Q: Where can I read about commands for bot console?
+A: Log in, type help, then you'll receive commands list. To read
+   about some command, type help this_command.
+   NOTE: help module has to be loaded. It's loaded by default.
+   If you haven't disabled it while creating config, then it's OK.
+
+Q: What does mean debug level 1 and 2?
+A: With debug level 1 any errors in tcl code will be sent to file
+   log/botname/debug.log. If bot crashes and you don't know why,
+   use this debug level.
+   Debug level 2 enables displaying all messages invoked by
+   debyg command in tcl code (see scripting) to standart output.
+
+Q: What if Giana can't start? It says, that it's already up with
+   some PID. I've check it and it's NOT up, I'm sure.
+A: It happens very, very rarely, usually when PID of previous
+   runned Giana is same as memory usage of some process.
+   Solution is very easy: rm .run/botname.pid (in giana directory).
+
+

@@ -1,0 +1,53 @@
+Commands mecho, lecho and echo can contains special
+formating strings, started by '%'. All of these commands
+use fcputs command (excemption is mecho with special switch,
+read about it in scripting.txt), so if you want to get
+cputs power in echo or lecho, you have to change it in scrtipting.tcl
+source, or force use cputs with user sock.
+Strings table:
+
+.--------------------------------------------------------------.
+|         | Font color | Font color | Background | Background  |
+|   Color | Dark       | Light      | color Dark | color Light |
++---------+------------+------------+------------+-------------+
+| blue    |     %b     |     %B     |     %#b    |     %#B     |
+| red     |     %r     |     %R     |     %#r    |     %#R     |
+| green   |     %g     |     %G     |     %#g    |     %#G     |
+| yellow  |     %y     |     %Y     |     %#y    |     %#Y     |
+| magenta |     %m     |     %M     |     %#m    |     %#M     |
+| white   |     %w     |     %W     |     %#w    |     %#W     |
+| black   |     %k     |     %K     |     %#k    |     %#K     |
+`--------------------------------------------------------------'
+
+Additional strings are:
+%% - single '%' char
+%n - standart color
+%d - bold
+%u - underline
+%v - video inverse
+%l - blinking text
+
+
+cputs <string> <ansi switch> [<-nonewline>] [<channelID>]
+Works similar to simple tcl puts, but <string> can contain
+ansi strings. <ansi switch> can be 1 or 0. 1 means ansi
+should be used, 0 means ansi to be disabled.
+Example:
+cputs "%wThis color is standart on most terminals. %CAnd this is Light Cyan, %R%#Band bloody Light Red on Light Blue background:)" 1
+As you see, you can set colors anywhere you want,
+also you can set background and foreground for same part of string.
+'1' on end of command is ansi switch.
+
+fcputs <string> <ansi switch> [<-nonewline>] [<channelID>]
+It's restricted version of cputs.
+Ansi strings can't be used multiple times
+on same part of string (it means that bgcolor and fgcolor
+using at same time is not possible, same situation with
+fgcolor or bgcolor with some additional strings).
+This function is a little faster than cputs, so should be
+used enywhere of it is possible.
+Example from cputs will be not correctly displayed with fcputs,
+'%R%#B' will be interpreted uncorrectly.
+With this commands you can type:
+fcputs "%KThis is Light Black color. %#BNow font has returned to standart color, but now it's on blue background." 1
+

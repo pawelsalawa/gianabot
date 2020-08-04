@@ -1,0 +1,39 @@
+There are some libraries in directory lib. They aren't written
+for Giana project, but imported from some other projects,
+becouse they are very helpful with writing some scripts.
+
+Short descriptionf of libraries included to this Giana version:
+
+base64      - Encodes/Decodes strings with base64 code.
+              It's very helpful while operating on some binary
+              strings. Commands:
+              ::base64::encode <string>
+              ::base64::decode <string>
+
+fileutil    - Few commands known from unix word for TCL.
+              For description take a look to file source.
+
+ftp_lib     - Very nice ftp protocol library. You can easy
+              log in on ftp server, get file, etc.
+              Full documentation is in docs/ftp_lib.
+
+history     - Command history managing tool. Commands:
+              history <add/change/clear/event/info/keep/nextid/redo> <some arguments>
+
+http        - Also very nice library for using http protocol.
+              You can easy read website and select information,
+              which interest you. For commands list look into
+              library source file.
+
+httpd       - Small and nice web server. Just load it and start
+              by command: Httpd_Server /path/to/document/root PORT
+
+math        - Few more advanced math procedures. For description
+              take a look to file source.
+
+md5pure     - Generating MD5 digests. Commands:
+              ::md5pure::md5 <string>
+              ::md5pure::hmac <key> <string>
+
+word        - Additional words manipulating procedures.
+              For commands look to library source file.

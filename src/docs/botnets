@@ -1,0 +1,70 @@
+Creating botnets by Giana bots is very easy.
+Most simple botnet:
+
+    Hub
+   /   \
+Leaf1  Leaf2
+
+To make this botnet you have to execute following commands:
+on Hub:
++bot leaf1 address.of.leaf1.org:bots_port_on_leaf1/users_port_on_leaf1
++bot leaf2 address.of.leaf2.org:bots_port_on_leaf2/users_port_on_leaf2
+on Leaf1:
++bot hub address.of.hub.org:bots_port_on_hub/users_port_on_hub
+and same command on Leaf2:
++bot hub address.of.hub.org:bots_port_on_hub/users_port_on_hub
+Now you can execute link command to link bots:
+on Leaf1:
+link hub
+on Leaf2:
+link hub
+And done... Now botnet works.
+
+Now let make some bigger and more advanced botnet, which will looks like:
+
+          __Hub__
+         /   |   \
+    Slave1 Slave2 Slave3
+  /    |     |      |    \
+Leaf1 Leaf2 Leaf3 Leaf4 Leaf5
+
+So, on hub:
++bot slave1 address.of.slave1:bots_port/users_port
++bot slave2 address.of.slave2:bots_port/users_port
++bot slave3 address.of.slave3:bots_port/users_port
+
+on Slave1:
++bot hub address.of.hub:bots_port/users_port
++bot leaf1 address.of.leaf1:bots_port/users_port
++bot leaf2 address.of.leaf2:bots_port/users_port
+
+on Slave2:
++bot hub address.of.hub:bots_port/users_port
++bot leaf3 address.of.leaf3:bots_port/users_port
+
+on Slave1:
++bot hub address.of.hub:bots_port/users_port
++bot leaf4 address.of.leaf4:bots_port/users_port
++bot leaf5 address.of.leaf5:bots_port/users_port
+
+on Leaf1 and Leaf2:
++bot slave1 address.of.slave1:bots_port/users_port
+
+on Leaf3:
++bot slave2 address.of.slave2:bots_port/users_port
+
+on Leaf4 and Leaf5:
++bot slave3 address.of.slave3:bots_port/users_port
+
+Now you can use link command to link bots. There is no
+rule, which bot will link first, which second, etc.
+Just link them in any sequence.
+Generally, add all bots, which bot should link directly
+and link them.
+You have not add hostmasks for added bots (but you can),
+becouse if bot detects that he doesn't got any hostmask of bot,
+which he has just linked with, he adds it automatically.
+
+When you link all bots, you can execute command setlinks.
+Bots will remember their links and will link automatically
+after start. You can also add links to remember by +link/-link.

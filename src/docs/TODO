@@ -1,0 +1,21 @@
+!!! = Most important.
+!! = Very important.
+! = a little important.
+. = Some feature to add.
+
+2.1
+!!! New networks support.
+!!! More userfriendly events handling by new command ON.
+!!  Option for command line to check for new version of giana and download it.
+!!  ident via msg.
+!   New coders support (morse, etc.).
+!   Wrapping lines. When you're writting some command in telnet console and bot displays something, he does it in new line.
+!   halfops and owners support.
+.   Documentation in HTML.
+
+2.2
+!!  Crypting all lists and config files. Some small part of bot must be for compiling or close-source. It will allow to make really safe crypting engines.
+
+2.x
+!!  Dynamicaly removing scripts
+.   GPRS support? :)

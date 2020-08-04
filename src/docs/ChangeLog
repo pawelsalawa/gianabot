@@ -1,0 +1,74 @@
+2.0.0-BETA-3 -rd command line option for fast reading debug log.
+2.0.0-BETA-3 Debug has been rewritten. Works more flexible.
+2.0.0-BETA-3 Script stats upgraded. It's now much more powerfull. Stats are splitted for each channel, also configuration of this script has been rebuilt. It can also make nice website with stats.
+2.0.0-BETA-3 Fixed crash on {, } and " chars. Now they are completly isolated from pasring as TCL operators.
+2.0.0-BETA-3 Added --checkhelp option for scripts writers to check script if all aliases has got help (by reading help from help.tcl and from being checked script).
+2.0.0-BETA-3 Logging from channels engine has now 3 modes: giana-like (default and most reliable), eggdrop-like and epic-like.
+2.0.0-BETA-3 Users passwords are now little more safe. They are crypted by hmac procedure from md5pure library. NOTE: There will be no really safe encrypting engine, until whole bot is in source. For details read TODO.
+2.0.0-BETA-3 Windows telnet clients support fixed.
+2.0.0-BETA-3 Help module updated.
+2.0.0-BETA-3 Lot, lot, lot of console commands added. Just type help in console :)
+2.0.0-BETA-3 AutoAway after 90 seconds.
+2.0.0-BETA-3 Added daily saving lists and configuration file.
+2.0.0-BETA-3 OP via msg done.
+2.0.0-BETA-3 executing commands via privmsg channel/priv done.
+2.0.0-BETA-3 Lot of bugs fixed.
+
+2.0.0-BETA-2 -H command line option for virtual host defining,
+2.0.0-BETA-2 Logging on via DCC CHAT done.
+2.0.0-BETA-2 Telnet and DCC CHAT flood protection done.
+2.0.0-BETA-2 -u command line option for username defining.
+2.0.0-BETA-2 -F channel flag.
+2.0.0-BETA-2 TCL scripts added to base package: seen, stats, quote and google.
+2.0.0-BETA-2 Timer implemented. Now you can run command each minute, etc. See scripting.
+2.0.0-BETA-2 Fixed important bug depended with channel names.
+2.0.0-BETA-2 -r switch in command line for allow restrictied connections.
+2.0.0-BETA-2 Global bitch switch removed. Now only b flag for channels means bitch mode.
+2.0.0-BETA-2 Partial support for halfops.
+2.0.0-BETA-2 New command line option -c connects user to given bot on localhost (port remember isn't required).
+2.0.0-BETA-2 New command line option -m displays memory usage for bot.
+2.0.0-BETA-2 Bots links each other automatically.
+2.0.0-BETA-2 New command line option -d runs bot in debugging mode.
+2.0.0-BETA-2 Password typing is hidden.
+2.0.0-BETA-2 Log making engine.
+2.0.0-BETA-2 Relay command. Logging in on remote bot is automatic.
+2.0.0-BETA-2 Commands listing is now sorted.
+2.0.0-BETA-2 rand procedure changed. Now it's much faster and more powerful.
+2.0.0-BETA-2 Config module upgraded.
+2.0.0-BETA-2 Flood protection done (public, join and nick change flood protection).
+2.0.0-BETA-2 Auto-connect to server after start and after disconnect.
+2.0.0-BETA-2 Many other bugs fixed.
+
+2.0.0-BETA-1 Bots can ask about keys, invitations, ops and exemptions from bans another bots.
+2.0.0-BETA-1 New module: config. Now it's possible to create default config for editing and create config by creator.
+2.0.0-BETA-1 Majority of bot code moved from giana executable to module main. Now running bot takes less time.
+2.0.0-BETA-1 New flags for channels - f, u and U.
+2.0.0-BETA-1 Almost all important messages from irc protocol implemented.
+2.0.0-BETA-1 New libs.
+2.0.0-BETA-1 EggTclPorting module (for compatybility with eggdrop TCLs).
+2.0.0-BETA-1 help module.
+2.0.0-BETA-1 permanent bans, invites and exempts, by commands +ban, +inv, +ex (also -ban, etc.)
+2.0.0-BETA-1 new commands for handling channel bans, exempts and invites lists: onExempts, onBans, onInvites
+2.0.0-BETA-1 flags (and chattr) command modified again. Now it's more userfriendly.
+2.0.0-BETA-1 isuser2 command fixed.
+2.0.0-BETA-1 host command upgraded. Detects if user isn't known, then requests hosts from server.
+2.0.0-BETA-1 isuser1 command works at least.
+2.0.0-BETA-1 Commands for network administrating.
+2.0.0-BETA-1 A lot of other bugs fixed.
+
+2.0.0-ALPHA-3 A lot of commands for displaying informations, lists, etc.
+2.0.0-ALPHA-3 Saving and loading lists and config now works.
+2.0.0-ALPHA-3 Bots sends lists betwean each other.
+2.0.0-ALPHA-3 Fixed bug for connecting to EFnet.
+2.0.0-ALPHA-3 Documentation updated.
+2.0.0-ALPHA-3 chattr and botattr (or flags and botflags) commands modified. Now these are more powerful.
+2.0.0-ALPHA-3 A few small things more...
+
+2.0.0-ALPHA-2 locale module added.
+2.0.0-ALPHA-2 Linking bots.
+2.0.0-ALPHA-2 A lot of new commands and procedures.
+2.0.0-ALPHA-2 Fixed few small bugs.
+
+2.0.0-ALPHA-1 Basic functions of IRC protocol has been implemented.
+2.0.0-ALPHA-1 Modules added: libterm, scripting, commands and on.
+2.0.0-ALPHA-1 Documentation for current functions has been written.

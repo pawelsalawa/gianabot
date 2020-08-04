@@ -1,0 +1,26 @@
+* This is not most important thing to port eggdrop TCL commands
+  to Giana, so I don't spend much time on it. Also not all commands
+  are needed. There will be support only for most important commands.
+* Any supported commands are without switches.
+* Many commands doesn't work exactly same as in eggdrops, so there
+  are required some corrections for them in script code. Most of
+  needed corrections are described below supported commands index.
+* Supported commands so far:
+    putserv
+    putkick
+    putlog
+    putdcc
+    putkick
+    putquick
+    validuser
+    nick2hand
+    dccbroadcast
+    boot
+    unixtime
+
+
+
+Needed corrections:
+* In putdcc first argument is user name, not as in eggdrops, dcc ident.
+* Replace any utimer and timer by after (clean TCL) command. Also utimers
+  and timers commands will be not supported. Do their work by another way.

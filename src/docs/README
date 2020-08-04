@@ -1,0 +1,53 @@
+           ,----------------   --   -
+      ____|___________
+     /     /\_/      /\    Giana Irc Bot
+    /     / //______/ /
+   /     / /_\______\/  Unleash the power of TCL
+  /     / //      /\
+ /_____/_//      / /       Coded by Googie
+ \_____\//      / /        Logo by Ext2fs
+         \     / /
+         |\   / /      http://www.giana.arkada.pl
+         | \ / /       IRC: #GianaBot at IRCNet
+         `--\ /-------- -- -       -
+             ` 
+Giana 2 IRC Bot by Pawel Salawa
+(Googie at IRCNet and EFNet, boogie@tl.krakow.pl)
+
+This is completly rewritten and modified version
+of Giana Bot 1.x, which was written in EPIC4 shell.
+There are similar ideas, but made better and in more faster,
+more powerful language, which is TCL. This language is well known
+by a lot of people, so if you are one of them, then take a look
+to scripting document. Also Eggdrop TCL scripts should be fine
+for Giana2, but with small changes.
+
+Already Giana2 supports (currently) only IRCNet for sure, but it
+should works also on EFnet and similar networks. Services and other
+features of DALnet and Undernet networks are not supported yet.
+
+Directories description:
+config      - configuration files for bots
+docs        - documentation
+lists       - userlists, botlists and chanlists of bots
+lib         - TCL libraries which are not created by Giana project
+locale      - directory with locale translations
+logos       - ASCII logos for 'motd'
+modules     - rest of Giana code in modules
+scripts     - here should be all of additional scripts,
+              which you want to be able to load.
+.run        - hidden directory, where bots keeps theirs files
+              with PID ident.
+
+INSTALLING:
+-----------
+Installation process is very, very easy. Just unpack giana
+in some directory (suggested is you home dir) and that's all :)
+Read FAQ.
+*NOTE*: Giana2 in source version requires TCL version 8.4 or newer.
+        You can find it at http://www.tcl.tk/software/.
+
+BUGS:
+-----
+Please, send all bugs to boogie@arkada.pl, or try to find me on
+channel #GianaBot at IRCNet. Any wishes are welcome too.

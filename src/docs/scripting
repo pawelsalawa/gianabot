@@ -1,0 +1,887 @@
+
+        Giana 2.0.0 TCL procedures index.
+        ---------------------------------
+        
+        About syntax:
+        If argument is betwean '<' and '>'
+        then it means that argument
+        has to be in command syntax.
+        If argument is betwean '[' and ']'
+        then it means that argument
+        can (but hasn't to) be in command syntax.
+        Also if argument is betwean '<' and '>',
+        then it means that argument have to be
+        replaced by right word, given by you
+        and if argument is clean (without '<' and '>'),
+        then it have to be replaced by one of
+        suggested by itself words.
+        !!!WARNING 1!!! If some argument is list
+        then it should be betwean { and } or " and ".
+        This is standart in TCL!
+        !!!WARNING 2!!! Read again warning 1.
+        It seems to give a lot of problems for
+        begginers.
+
+
+MAIN PROCEDURES:
+================
+
+    alias <command name> <command code> [u/m/n]
+Commands created by 'alias' can be executed by users logged on bot.
+These commands names are added to variable cmdlist automatically,
+so this variable contains list of available commands.
+Rights to this command are automatically added too by u/m/n
+(which means flag required to use this command). If no flag
+is given, then flag 'u' is default.
+In <command code> can be evaluated following variables:
+$args - all arguments
+$n - n'th argument. $0 is first, $1 is second, etc.
+$_ - user which evaluated command
+$sock - users connection socket
+$c - number of arguments
+$cmd - name of command executed
+If some alias already exists, new code for him will be ignored.
+You can make shorter aliases for existing aliases very fast
+by writing alias with following syntax:
+alias <new command name> <old command name>
+One rule - it have to be after old alias code.
+
+    on [-] <pattern> <body> [<index>]
+Reaction on server input.
+Pattern can contain following chars:
+? - exactly one char
+% - exactly one word
+* - 0 or more chars
+(for more advanced users - you can use TCL Regular Expression tags,
+also see regexp file).
+In ON are available following variables:
+$data = full data line from server.
+$0 - $n = n'th word from $data ($0 is first, $1 is second, etc.)
+$ON - index of current on pattern.
+If <pattern> is an one word, then '{' and '}' can be ommited.
+It is possible to use " instead { and }, but only if you want to
+evaluate some variables in <pattern>.
+Syntax like : on - <pattern> [<index>]
+removes <pattern> from ON list.
+Index is for use same pattern multiple times (ussualy in
+additional tcl scripts). It can be number or some word.
+Default index (if is not given) is 0.
+
+OPERATIONS ON LISTS:
+====================
+
+    lremove <list> <index>
+Returns list without word indexed by index.
+
+    lreverse <list>
+Sorts list by reversing it and returns it.
+
+    ldelete <variable name> <words list>
+Given variable has to contain list of words.
+Porcedure removes from this list words given
+as second argument.
+
+    match <list> <pattern>
+Check if pattern matches to any
+word from list. Mask and words can contain
+chars * and ?.
+
+    lmatch <list> <pattern>
+Similar to match, but here only pattern
+can contain chars * and ? (it's faster).
+
+    rmatch <pattern list> <word>
+Similar to lmatch, but here is no one
+pattern, but list of patterns and only
+one word.
+
+    pattern <list> <pattern>
+Check is pattern matches to any word from list.
+If does, then returns all words, which matches.
+Pattern can contain chars * and ?.
+
+    rpattern <patterns> <word>
+Check is any pattern matches to word.
+If does, then returns all patterns, which matches.
+Patterns can contain chars * and ?.
+
+    npattern <list> <pattern>
+Check is pattern matches to any word from list.
+If does, then returns all words, which NOT matches.
+Pattern can contain chars * and ?.
+
+    rnpattern <patterns> <word>
+Check is any pattern matches to word.
+If does, then returns all patterns, which NOT matches.
+Patterns can contain chars * and ?.
+
+    getStuff <temp array index>
+It gets a value from variable temp indexed by
+<index>, interprates it as list of arguments and makes queue.
+Then each execute of this command returns next argument of queue.
+It is more simple to explain by example:
+For start let set some value for indexed temp:
+set temp(some_index) "a b c d e f g h i j k"
+now:
+getStuff some_index
+will return 'a', each next execute of getStuff: some_index
+will return:
+b, c, d, e, f, g, h, i, j, k, and if queue has ended
+then is starts from first argument.
+If array of temp with given index does not exist,
+then empty string is returned.
+
+    getStuff2 <temp array index>
+Same as getStuff, but if list ends, then returns
+empty string and next execute this command returns
+first argument. This procedure is usefull if you want
+to check if list has ended but you still want to
+use it in future.
+
+    getword <varname>
+Works exactly same as getStuff, with one exception:
+you don't give temp array index, but variable name,
+which will be returned word from.
+
+    getword2 <varname>
+See difference betwean getStuff and getStuff2.
+Here is exactly difference.
+
+    common <list1> <list2> [<options>]
+This command returns common words for both of
+lists. Option could be any lsearch command option
+(-all, -not, -exact, -glob, see lsearch manual)
+
+    ncommon <list1> <list2> [<options>]
+This command returns NOT common words for both of
+lists. Option could be any lsearch command option
+(-all, -not, -exact, -glob, see lsearch manual)
+
+    uniq <list>
+Works similar to 'lsort -unique' but without sorting.
+Use only when sorting is an obstacle, couse uniq is
+(about) two times slower.
+
+OPERATIONS ON STRINGS:
+======================
+
+    center <width> <string>
+Returns string centered betwean spaces.
+Example:
+puts "LEFT:[center 10 ble]:RIGHT"
+will return:
+LEFT:    ble   :RIGHT
+
+    pad <count> <char> <string>
+If string is shorter than count, then it is completed by char
+and returned in this form, else returns unchanged string.
+
+    rpad <count> <char> <string>
+Similar to pad, but it completes left side of string.
+
+    fec <variable> <string> <code>
+Executes code For Each Character from string. In code
+exists 'variable', which contains char for current loop.
+
+    strip <chars> <string>
+Returns string without any of chars.
+
+    ASCIIfilter <string>
+Returns string without 'strange' chars, like control-chars
+and many others.
+
+    ALNUMfilter <string> [1/0]
+Returns string without all chars, which aren't alpha-numeric.
+Optional argument 1/0 is switch, which tells filter if it
+should allow white-spaces inside string (1), or not (0).
+Default value of switch is 0.
+
+    havechar <string> <char>
+Check if string contains char.
+Case sensitivity.
+
+    nhavechar <string> <char>
+Check if string contains char.
+No case sensitivity.
+
+    havechars <string> <charslist>
+Check if string contains at least one of char
+from charlist. charlist is space-separated
+list of chars.
+Case sensitivity.
+
+    nhavechars <string> <charslist>
+Check if string contains at least one of char
+from charlist. charlist is space-separated
+list of chars.
+No case sensitivity.
+
+    ahavechars <string> <charslist>
+Check if string contains all of chars
+from charlist. charlist is space-separated
+list of chars.
+Case sensitivity.
+
+    nahavechars <string> <charslist>
+Check if string contains all of chars
+from charlist. charlist is space-separated
+list of chars.
+No case sensitivity.
+
+    sort [<options>] <string>
+Returns literally sorted string. Example:
+puts "[sort jagryso]"
+will give:
+agjorsy
+Options can be all options valid for lsort command.
+
+    safecode <string> [+/-] [<type>]
+Replaces string chars " (which can be found in privmsg messages)
+by '^A^C', because it can give problem to TCL while setting this
+string as variable value, etc.
++ or - means if procedure should encode or decode string from
+safe code.
+If type is given (can be only to '1') then replaces chars
+'{' by '^A^A' and '}' by '^A^B'.
+
+    ascii encode/decode <string>
+Encodes or decodes string to/from ascii code,
+and return it as space-separated list. Example:
+puts "[ascii encode abc]" will display:
+97 98 99
+
+    randcrap <count>
+Returns randomly generated string, not longer than count.
+
+    encodepass <string>
+Encodes given string with botnet password as a key
+and returns it.
+
+    decodepass <string>
+Given string has to be encoded password by command 'encodepass'.
+Returns decoded password, only if botnet password is same as
+used to encode passwrd.
+
+    crypt <key> <string>
+Encodes given string with given kay and returns it.
+::md5pure::hmac command is used to encode, so there is no command
+to decode it. Decode crypted string is very hard.
+
+    encode <string> <key>
+Encodes given string with given key and returns it.
+Returned value is space-separated list of numbers.
+
+    decode <encoded string> <key>
+Decodes string encoded by encode command with
+given key. Then returns it.
+
+    ctrl <char>
+Returns 'control-char' (^char). Allowed chars:
+a, b, c, g, i, u.
+
+IRC PROTOCOL OPERATIONS:
+========================
+
+    quote <server command>
+Sends raw data to server, which bot is connected to.
+
+    amon <channel>
+Check if bot is on channel.
+
+    ison <nick> <channel>
+Check if nick is on channel.
+Bot have to be on that channel.
+
+    isop <nick> <channel>
+Check if nick has got op on channel.
+It first lookups if nick is on channel,
+so you don't need to do it before.
+Bot have to be on that channel.
+
+    ishop <nick> <channel>
+Similar to isop, but checks for halfop.
+
+    isvop <nick> <channel>
+Similar to isop, but checks for voice.
+
+    amconn
+If bot is connected to any server, then
+returns 1, else returns 0.
+
+    host <nick>
+Returns nicks full irc hostmask (nick!user@host).
+If user is well known (useful is function isknown),
+then returns it without any waiting, if not,
+then functions asks server for nicks host and then
+returns it.
+
+    Host <nick>
+Works similar to 'host' procedure, but if given users host
+isn't known, then returns *@*, instead of asking server.
+
+    isknown <nick>
+If host of nick is known by bot, then returns 1, else returns 0.
+
+    ischan <string>
+Returns 1 if string is valid channel name, else returns 0.
+
+    nickchar <nick> <channel>
+Returns (higher in hierarchy) user mode char for nick
+on channel, but only if nick is on channel scanned by bot.
+Hierarchy is:
+1) * - irc op
+2) @ - op
+3) + - voice
+4) White space (bot doesn't know nick or nick has no status)
+
+    mask <nick!user@host> [<type>]
+Convert and returns given irc mask in following form:
+Type Mask
+0    *!user@host
+1    *!*ser@host
+2    nick!*@host
+3    *!*@host
+4    *!user@*.host
+5    *!*ser@*.host
+6    nick!*@*.host
+7    *!*@*.host
+nick nick
+user user
+host host
+'*ser' means that there will be returned '*' and username
+started from second char. *.host means that there will be
+returned '*.' and part of host after first '.' in host.
+If <type> is not given, then type 0 is used as default.
+
+    users <channel> [<flag>]
+Returns list of users on channel. If flag is given,
+returns only users which has got this flag on channel.
+Flag can be one of following:
+* - an IRC op
+@ - a channel op
++ - got voice on channel
+H - is here (not away)
+G - is gone (away)
+
+    isuser1 <nick>
+Looks for nick on IRC and check his host. Then check
+if his host matches to any user and if does, then return
+his name.
+
+    isuser2 <hostmask> [bot/user]
+Check is hostmask matches any user from userlist
+or botlist. If does, then returns name of this user.
+Optional switch bot/user tells function if it should
+match user only from bots list or users list.
+
+    isuser3 is in part of commands for console.
+
+    onExempts <channel> <command>
+    onBans <channel> <command>
+    onInvites <channel> <command>
+Command is executed after all exempts/bans/invites are received.
+mode #channel +I/+e/+b is executed automatically.
+
+    OnExempts <channel> <command>
+    OnBans <channel> <command>
+    OnInvites <channel> <command>
+Similar to above, exempt that mode #channel +char is not executed
+automatically to receive masks. These procedures only remembers
+commands to execute after all masks had been received.
+
+    timeop <channel> <nick>
+    timevop <channel> <nick>
+    timekick <channel> <nick>
+These commands adds nick to adequate list for channel. It's better
+to use these commands instead op, vop and kick, becouse it uses
+Giana built-in mechanisms for these jobs. Bot waits very short
+time for another nicks to op/vop/kick and then execute action
+by multimode/multikick.
+
+Following commands does not need descriptions. They are well known.
+    op <nicks>
+    deop <nicks>
+    vop <nicks>
+    devop <nicks>
+    join <channels> [<key>]
+    part <channels> [<reason>] (or leave <channels> [<reason>])
+    msg <nick> <message>
+    say <channel> <message>
+    notice <nick> <message>
+    ctcp <nick> <type> [<message>]
+    rctcp <nick> <type> [<message>] (ctcp reply)
+    kick <nick> [<reason>]
+    mkick <nicks>
+    Invite <chan> <nick> (starts with I! not i.)
+It's good idea to use these commands instead of your own quote
+messages to server, becouse they includes botnet 'getop' support.
+    
+    ban <channel> <nick/host>
+    unban <channel> <nick/host>
+    invite <channel> <nick/host>
+    uninvite <channel> <nick/host>
+    exempt <channel> <nick/host>
+    unexempt <channel> <nick/host>
+Sets/unsets b/I/e modes for hosts or nicks hosts on channel.
+
+    massmode <channel> <sign> <char> <arguments>
+Just examples:
+massmode #channel + o nick1 nick2 nick3 nick4 nick5 nick6
+massmode #channel - b *!*@mask1 nick!*@* *!user@* nick!user@*
+
+OPERATIONS ON ARRAYS, VARIABLES AND OTHERS:
+===========================================
+    
+    rand [[<minimum>] <maximum>]
+If no arguments given, returns random logical value (1/0). If only
+one argument is given, then return random integer value, not greater
+and not equal to given argument. If two arguments given, then return
+random integer value, greater or egual to first argument and not greater
+and not equal to second argument.
+
+    is <varname>
+Check if variable called varname
+exists. It's same as:
+info exists varname
+but a lot shorter.
+
+    getglob
+This command imports all global variables
+which exists in commands like 'on' and 'alias'
+to local procedure. Use this only if it's really needed,
+can makes procedure a little slower and takes more memory.
+You can see list of these variables by reading few lines
+from giana file. You can also add some your variable,
+by executing on top level command:
+lappend globals your_variable_name
+
+    jot <number1> <number2>
+Returns space-separated list of counts, started
+from number1 and finished on number2. Example
+puts "[jot 5 10]" will display:
+5 6 7 8 9 10
+
+    foreach2 varname array index_pattern body
+Example:
+set arr(1:3:5) "1"
+set arr(3:7:2) "4"
+set arr(1:7:9) "5"
+then:
+foreach2 x arr 1:* {
+    puts "$arr($x)"
+}
+will display:
+1
+5
+and:
+foreach x arr *:7:* {
+    puts "$arr($x)"
+}
+will display:
+4
+5
+
+    require <script>
+Checks if script is loaded, if not then
+does that. In script name .tcl extension can be omited.
+If required script can't be loaded (doesn't exixts or
+not readable) then user is noticed about this.
+
+    lib <library>
+Same as require command, but relate to libraries.
+
+    convTime <seconds>
+It converts seconds to: days hours minutes seconds.
+Example:
+convTime 32464
+will give:
+9h 1m 4s
+
+    reconvTime <time>
+Converts given time to unix time. Given time can contain
+following arguments: <number>d, <number>h, <number>m,
+<number>s, where end-chars means: days, hours, minutes
+and seconds.
+
+    convCount <number>
+For number:
+1 returns 1st
+2 returns 2nd
+3 returns 3rd
+4 and so on, returns 4th and so on...
+
+    timer <time HH:MM> <command>, or timer - <time HH:MM>
+Command is triggered whenever the specified time (or time glob
+pattern) matches the current time. With second syntax, timer
+hook is removed from list. There can be used local variable TIME
+in command body, which contains current time: HH:MM.
+
+    ip_to_int <ipv4 address>
+This converts an ip address into a 32 bit internet address.
+DCC uses it.
+
+    mv [u<cnt>] [d<cnt>] [l<cnt>] [r<cnt>] [<row,col>]
+Moves cursor:
+u - <cnt> lines up
+d - <cnt> lines down
+l - <cnt> lines left
+r - <cnt> lines right
+or exactly to row,col.
+
+    curpos [save/load]
+Saves or load cursor position.
+
+    k <foreground[,background]>
+Returns mirc colors tag for given color(s). Supported names for colors are:
+white
+black
+darkblue
+darkgreen
+red
+darkred = brown
+darkpink = darkmagenta
+darkyellow = orange
+yellow
+green
+darkcyan
+cyan
+blue
+pink = magenta
+lightblack = darkgrey
+lightgrey = darkwhite
+
+    uptime
+Returns UNIX time from bot start moment.
+
+    me
+Returns bot current nick.
+
+    shellIdo <channel>
+Returns 1 or 0. Use this procedure if many bots on same channel
+would do some mode change, or kick, etc. at same time.
+This procedure can select one of opped bots which should do it.
+Procedure returns 1 for local bot, if exactly this bot has to do it,
+then for other bots this function will return 0, belive me :)
+
+    ts <string> [<arguments>]
+This command translates given string to bot locale (set in config)
+and returns it. Additionaly, there can be positional arguments
+in string. They are: %0, %1, %2, %3, %4, etc. and each of them
+will be replced by given optional positional <argument>, or will
+be not replaced, if there is no adequate <argument>.
+For example:
+set $var B
+puts [ts {This is the second arg: %1 and that's the first: %0. There is no third: %2.} A $var]
+will display:
+This is the second arg: B and that's the first: A. There is no third: %2.
+
+    localeTrans <locale> <source> <target>
+It defines <target> string as a translation of <source> string
+for given <locale>. Locale can be: en, pl, de, hu, fr, etc.
+It's for using in sctipts especially, couse scripter should not
+change global *.po files for scripts.
+
+ADDITIONAL PROCEDURES:
+======================
+
+    syntax <user> <command syntax>
+Standard command syntax notice. You have not remember
+to format colors in syntax message. It will be automatically
+done. Anotherwise is with mecho, lecho and echo, where you
+have to use color formating strings (see ansi.txt).
+
+    mecho <user> <message> [<ansi switch>]
+Sends <message> to <user>. Ansi switch enables (value=1)
+cputs power (read ansi.txt), or simple fcputs (value=0).
+fcputs is default if no switch value is given.
+
+    lecho <message>
+Sends <message> to all users logged on local bot.
+
+    echo <message>
+Sends <message> to all users logged on whole botnet.
+
+    ECHO <socket> on/off
+Enables or disables terminal echo for given socket.
+Useful when typing some passwords, etc.
+
+    botspeak <message>
+This command is usually used at begin lecho procedure.
+It returns colored '%botname%' string, where botname is
+of course replaced with real bot name, which is lecho
+executed on.
+
+    bestflag <user>
+Returns main flag for user. Main means u, m, or n.
+It user hasn't got any, then returns empty string.
+
+    haveflag <user> <flag> [<channel>]
+Check if user has got flag. If channel is given,
+then also flags for user on this channel are checked.
+
+    haveflags <user> <flags list> [<channel>]
+Similar to haveflag, but check if user has got at least
+one flag from flags list.
+
+    ahaveflags <user> <flags list> [<channel>]
+Similar to haveflags, but here user have to got
+all of typed flags. Case sensitive.
+
+    nahaveflags <user> <flags list> [<channel>]
+Similar to haveflags, but here user have to got
+all of typed flags. No case sensitive.
+
+    bhaveflag <bot> <flag>
+    bhaveflags <bot> <flags list>
+    xbhaveflags <bot> <flags list>
+Same funcions as theirs equivalents for users.
+One different is that <channel> doesn't extsts in syntax.
+
+    isuser3 <user> [bot/user]
+If user exists on botlist or userlist, then return
+his name (same as <user>), else returns nothing.
+If specified is type bot or user, then check only
+of this list.
+
+    islink <bot>
+Returns 1 if local bot is linked with bot,
+else returns 0.
+
+    isuser <user>
+Check is user is on userlist.
+(isuser3 checks both on users and bots list)
+
+    isbot <bot>
+Check if bot is on botlist.
+(same as in isuser)
+
+    bot <bot> <alias>
+Invokes alias on bot with owner rights.
+
+    bots <alias> [<bot>]
+Invokes alias on all bots in botnet.
+When bot is given, then invoking command is not sent to him.
+    
+    Bots <alias> [<bot>]
+Invokes alias on all bots connected to local bot.
+When bot is given, then invoking command is not sent to him.
+
+    bot2 <bot> <command>
+Invokes standart procedure on bot.
+
+    bots2 <command> [<bot>]
+Invokes standart procedure on all bots on botnet,
+except possibly given bot.
+
+    Bots2 <command> [<bot>]
+Invokes standart procedure on all bots connected to local bot,
+except possibly given bot.
+
+    isBotNet
+Returns 1 if local bot is connected with
+any other bot, else 0.
+
+    isLoggedOn <user>
+Checks if user is logged on local bot.
+
+    botsonchan <channel>
+Returns list of known bots, which are on given channel.
+
+    mychan <channel>
+Checks if channel is on bot channels list.
+
+    canChange <user1> <user2>
+This function is for security. It checks rights of user1 and user2
+and tells if user1 can change anything for user2.
+
+    listen <port> <type> [<host>]
+Opens socket on port. Type is procedure name, which is called
+when connection is incoming. This procedure should has got three
+arguments: socket, hostname and port. Socket is socket name for
+incomming connection, hostname is host of remote client
+and port is port which is remote client connected to. Optional
+argument host, is hostname, which should be used to open socket
+(simple - it's for using vhosts).
+
+    log <target> <string>
+Writes string to log file. Log file name is target_date.log,
+where target is given argument, and date is current date in format
+month.day.year.
+
+    LOG <string>
+Writes string to bot main log file. Log file name is giana.log.
+
+    cmd <command> [<argument1> [<argument2> [...]]]
+Executes 'alias' command. 'alias' commands are commands, which can
+be called from console and cmd can call it from script code.
+
+    scriptname
+Returns file name of script which is currently loading.
+
+    debug <text>
+Puts debug text to all users logged on local bot, but only when
+debug level is set to 2.
+
+    /
+You can use / as a command for block comments. For example:
+/ {
+here some comment
+for few lines
+}
+or simply:
+/ this is some comment
+In this ^^^ one case, it works similar to '#'. It's useful when
+you have some part of code to comment out and you're too lazy
+to write '#' before each line. You can just close whole code
+betwean breces of / command.
+
+PROCEDURES FOR MANIPULATING IMPORTANT VARIABLES:
+===============================================
+
+    getuser <user> <type> [<additional arguments>]
+Returns given user information. Additional argument
+is used only for CHANFLAGS type. Types of informations:
+HOSTS               - users hostmasks, as list.
+FLAGS               - users global flags.
+CHANFLAGS <channel> - users local flags.
+PASS                - users password.
+XTRA                - some extra values of user.
+
+    setuser <user> <type> [<additional arguments>] [<new value>]
+Sets information for given user. Types of informations are same
+as for procedure getuser.
+
+    getchannel <channel> <type>
+Returns information about given channel. Types of informations:
+NICKS               - nicks on channel.
+OPS                 - channel operators
+VOPS                - nicks with voice
+HOPS                - channel half-ops
+CMODE               - current mode
+MODE                - mode to keep by bot
+CKEY                - current key
+KEY                 - key to keep by bot
+LIMIT               - current limit
+TOPIC               - current channel topic
+KNOWN               - 1 if channel is scanned, otherwise 0.
+
+    setchannel <channel> <type> [<new value>]
+Sets information for given channel. Types of informations:
+MODE                - mode to keep by bot
+KEY                 - key to keep by bot
+TOPIC               - channel current topic
+
+    channels list/real
+Returns list of channels from list or channels which bot is on.
+
+    getbot <bot> <type>
+Returns given bot information. Types of informations:
+FLAGS               - bot flags
+HOSTS               - bot hosts
+ADDRESS             - bot adress
+PORT                - users and bot ports as list
+
+    setbot <bot> <type> [<new value>]
+Sets information for given bot. Types of informations are same
+as for procedure getbot.
+
+    getnetpass
+Returns current botnet password.
+
+    cmdlist [r/n/m/u]
+Returns list of commands allowed for specified users group:
+roots, owners, masters or users.
+
+    getserver <type>
+Returns information about servers. Types:
+LIST                - servers list
+CURRENT             - server, which is bot already connected to
+CSOCK               - current server socket name
+NICK                - bots current nick
+
+    getconsole <type>
+Returns information about bot console. Types:
+USERS               - logged on (local) users
+BOTS                - number of bots linked
+BOTNAME             - name of local bot
+    
+BUILDING PUBLIC COMMANDS:
+=========================
+
+'Public command' means that command can be executed via channel
+message. There are two kinds of public commands:
+1) Available for everyone. To build this command you have to
+write procedure like that:
+proc pub:command_name {nick uhost handle channel arg} {
+    Here your code.
+    nick = command executor nick
+    uhost = his host
+    handle = if nick is registered user on bot,
+             then it's his username, else it's empty
+    channel = on which it's executed
+    arg = optional arguments given to command while executing
+}
+2) Available only for registered users with at least
+one flag from u, m, n, r, c:
+proc PUB:command_name {nick uhost handle channel arg} {
+    Here your code. All of variables are same as above.
+    handle here is always non-empty.
+}
+
+Same rules are for writing private messages procedures.
+Difference is 'msg' and 'MSG' instead 'pub' and 'PUB'
+and there is no 'channel' in procedure arguments list.
+Examples:
+proc msg:command_name {nick uhost handle arg} {
+...
+}
+proc MSG:command_name {nick uhost handle arg} {
+...
+}
+
+ADDING NEW FLAGS:
+=================
+
+Bot has to know, thet new flag should be allowed in commands like
++user, flags, chanmode, etc. so you have to add them into special
+variables.
+
+### If you want to allow flag for friendly users, then:
+
+append temp(friendflags) "your_flag(s)"
+
+for enemies:
+
+append temp(enemyflags) "your_flag(s)"
+
+Also you should specify, which users can manage this flag by add it
+to one of following variables (if you will not specify any, then no one
+will can manage it):
+
+For roots:
+append temp(allowflags:r) "your_flag(s)"
+For masters:
+append temp(allowflags:n) "your_flag(s)"
+For owners:
+append temp(allowflags:m) "your_flag(s)"
+For simple users:
+append temp(allowflags:u) "your_flag(s)"
+
+### New flags for channels:
+
+append temp(chanflags) "your_flag(s)"
+
+If flag isn't real channel mode, then you have to tell bot, that
+'It's only virtual flag, don't set it on channel!' by:
+append temp(chanflags_virtual) "your_flag(s)"
+
+If you want to your flag be set as default flag while adding new channel,
+just add it to following variable:
+append temp(default_chan_flags) "your_flag(s)"
+
+### You can also add new flag for bots:
+
+append temp(botflags) "your_flag(s)"
+
+There is no more settings for bot flags.
+

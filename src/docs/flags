@@ -1,0 +1,50 @@
+Flags for friendly users:
+--------------------------
+A       Means: Turn ANSI colors ON for this user.
+a       For flags like o and v means - set it automatically.
+o       This user should got op and can get it via msg
+        (/msg bot op #channel password)
+f       He's a friend. Never kick him.
+q       Don't look on anything he's doing. He can change on channel
+        anything and bot will not check it.
+u       He has simple user rights on bot.
+m       Bot master rights.
+n       Owner rights.
+r       Root rights, very similar to owner. One difference
+        is allow to use ! flag (and r of course).
+p       He can join to bot partyline.
+v       User should got voice.
+c       User can execute public (on channel) commands.
+!       User is immune. None, excempt root can do anything
+        with this user.
+
+Flags for enemies:
+-------------------
+b       Kick and ban him any time he join to channel (shit).
+d       Don't agree to he gets op.
+s       He can't get voice.
+
+Flags for channels:
+--------------------
+n, t, i, m, p, s, k, l
+        These flags means that similar modes on channel
+        should be kept by bot.
+b       This flag means that on this channel bitch should be active.
+c       On this channel can be executed public commands.
+f       On this channel bot will not keep modes. They can
+        be changed by ops.
+F       Similar flag to f, but with F, bots doesn't change modes
+        only if flags has been set by root, owner, master or user.
+        Also bots are learning new modes. So, when r/n/m/u sets mode
+        on channel, bots changes modes in their channels lists too.
+u       All masks for +e, +b and +I on lists are keept on channel.
+
+Flags for bots:
+----------------
+u       Send userlist to bot.
+b       Send botlist to bot.
+c       Send chanlist to bot.
+U, B, C These flags are similar to u, b, c, but in lowercase
+        flags local bot orders remote bot to erase all of old users
+        before receiving new list. With this flags bot will not
+        order to erase.

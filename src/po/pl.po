@@ -1,0 +1,1444 @@
+# translation of pl.po to Polski
+# Polish translation file for Giana 2
+# Copyright (C) 2003 Free Software Foundation, Inc.
+# Pawe³ Salawa <boogie@tl.krakow.pl>, 2003
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pl\n"
+"POT-Creation-Date: 2001-09-11 00:28+0200\n"
+"PO-Revision-Date: 2003-08-17 13:14+0200\n"
+"Last-Translator: Pawe³ Salawa <boogie@tl.krakow.pl>\n"
+"Language-Team: Polski\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0.1\n"
+
+#: /home/boogie/giana/modules/commands.tcl:8
+msgid "%C%0%c has been added to userlist."
+msgstr "%C%0%c zosta³ dodany do listy u¿ytkowników."
+
+#: /home/boogie/giana/modules/commands.tcl:9
+msgid "Change password for %C%0%c by command passwd or chpass."
+msgstr "Zmieñ has³o dla %C%0%c komend± passwd lub chpass."
+
+#: /home/boogie/giana/modules/commands.tcl:20
+msgid "Add flags for %C%0%c by command flags."
+msgstr "Dodaj flagi dla %C%0%c komend± flags."
+
+#: /home/boogie/giana/modules/commands.tcl:23
+msgid "%Y%0%y is already in userlist."
+msgstr "%Y%0%y jest aktualnie na li¶cie u¿ytkowników."
+
+#: /home/boogie/giana/modules/commands.tcl:34
+msgid "%C%0%c has been removed form userlist."
+msgstr "%C%0%c zosta³ usuniêty z listy u¿ytkowników."
+
+#: /home/boogie/giana/modules/commands.tcl:43
+#: /home/boogie/giana/modules/commands.tcl:60
+#: /home/boogie/giana/modules/commands.tcl:83
+#: /home/boogie/giana/modules/main.tcl:1474
+msgid "User %Y%0%y is immune (+!)."
+msgstr "U¿ytkownik %Y%0%y jest nietykalny (+!)."
+
+#: /home/boogie/giana/modules/commands.tcl:57
+msgid "%Y%0%y matches this mask, so %Y%1%y can't get it."
+msgstr "%Y%0%y pasuje do tej maski, wiêc %C%1%c nie mo¿e jej dostaæ."
+
+#: /home/boogie/giana/modules/commands.tcl:64
+msgid "Host %C%0%c added for %C%1%c."
+msgstr "Host %C%0%c dodany dla %C%1%c."
+
+#: /home/boogie/giana/modules/commands.tcl:66
+msgid "This host matches (or is matched by) another host of %Y%0%y."
+msgstr "Ten host pasuje do innego hosta %Y%0%y."
+
+#: /home/boogie/giana/modules/commands.tcl:72
+#: /home/boogie/giana/modules/commands.tcl:94
+msgid "No such user/bot."
+msgstr "Nieznany u¿ytkownik/bot."
+
+#: /home/boogie/giana/modules/commands.tcl:88
+msgid "Hosts matched by %C%0%c removed from %C%1%c."
+msgstr "Hosty pasuj±ce do %C%0%c usuniêto od %C%1%c."
+
+#: /home/boogie/giana/modules/commands.tcl:90
+msgid "%Y%0%y hasn't got host like this."
+msgstr "%Y%0%y nie ma takiego hosta."
+
+#: /home/boogie/giana/modules/commands.tcl:138
+msgid "~~~~~~~~%CUSER NICK%c~~~~~~~%CGLOBAL FLAGS%c~~~~"
+msgstr "~~~~~~%CNICK U¯YTKOWNIKA%c~~%CFLAGI GLOBALNE%c~~"
+
+#: /home/boogie/giana/modules/commands.tcl:142
+#: /home/boogie/giana/modules/commands.tcl:155
+#: /home/boogie/giana/modules/commands.tcl:169
+#: /home/boogie/giana/modules/commands.tcl:181
+msgid "LOCAL FLAGS:"
+msgstr "FLAGI LOKALNE:"
+
+#: /home/boogie/giana/modules/commands.tcl:146
+#: /home/boogie/giana/modules/commands.tcl:159
+#: /home/boogie/giana/modules/commands.tcl:173
+#: /home/boogie/giana/modules/commands.tcl:185
+msgid "HOSTS:"
+msgstr "HOSTY:"
+
+#: /home/boogie/giana/modules/commands.tcl:206
+#: /home/boogie/giana/modules/commands.tcl:212
+msgid "Password for %C%0%c changed."
+msgstr "Has³o dla %C%0%c zmienione."
+
+#: /home/boogie/giana/modules/commands.tcl:208
+msgid "You have to be owner if you want to change not your password."
+msgstr "Musisz byæ ownerem je¶li chcesz zmieniæ nie twoje has³o."
+
+#: /home/boogie/giana/modules/commands.tcl:230
+msgid "%C%0%c has been added to my botlist"
+msgstr "%C%0%c zosta³ dodany do mojej listy botów"
+
+#: /home/boogie/giana/modules/commands.tcl:239
+msgid "Hosts added for %C%0%c:"
+msgstr "Dodano hosty dla %C%0%c:"
+
+#: /home/boogie/giana/modules/commands.tcl:242
+msgid "Add flags for %C%0%c by command botattr."
+msgstr "Dodaj flagi dla %C%0%c za pomoc± komendy botattr."
+
+#: /home/boogie/giana/modules/commands.tcl:245
+msgid "I am"
+msgstr "Ja jestem"
+
+#: /home/boogie/giana/modules/commands.tcl:248
+msgid "%Y%0%y already exists on botlist."
+msgstr "%Y%0%y aktualnie jest na li¶cie botów."
+
+#: /home/boogie/giana/modules/commands.tcl:258
+msgid "%C%0%c has been removed from botlist."
+msgstr "%C%0%c zosta³ usuniêty z listy botów."
+
+#: /home/boogie/giana/modules/commands.tcl:276
+msgid "Port(s) for bot %C%0%c changed to %C%1%c."
+msgstr "Port(y) dla bota %C%0%c zosta³y zmienione na  %C%1%c."
+
+#: /home/boogie/giana/modules/commands.tcl:278
+msgid "Port should be in number format."
+msgstr "Port powinien byæ w formie liczby."
+
+#: /home/boogie/giana/modules/commands.tcl:281
+#: /home/boogie/giana/modules/commands.tcl:297
+msgid "No such bot"
+msgstr "Nieznany bot"
+
+#: /home/boogie/giana/modules/commands.tcl:284
+msgid "Port(s) for bot %C%0%c:"
+msgstr "Port(y) dla bota %C%0%c:"
+
+#: /home/boogie/giana/modules/commands.tcl:295
+msgid "Address for bot %C%0%c changed to %C%1%c."
+msgstr "Adres dla bota %C%0%c zosta³ zmieniony na %C%1%c."
+
+#: /home/boogie/giana/modules/commands.tcl:300
+msgid "Address for bot %C%0%c:"
+msgstr "Adres dla bota %C%0%c:"
+
+#: /home/boogie/giana/modules/commands.tcl:309
+msgid "Password for botnet has been changed."
+msgstr "Has³o dla botnetu zosta³o zmienione."
+
+#: /home/boogie/giana/modules/commands.tcl:328
+msgid "Botlist:"
+msgstr "Lista botów:"
+
+#: /home/boogie/giana/modules/commands.tcl:332
+#: /home/boogie/giana/modules/commands.tcl:363
+msgid "Bot flags:"
+msgstr "Flagi bota:"
+
+#: /home/boogie/giana/modules/commands.tcl:333
+#: /home/boogie/giana/modules/commands.tcl:364
+msgid "Address:"
+msgstr "Adres:"
+
+#: /home/boogie/giana/modules/commands.tcl:334
+#: /home/boogie/giana/modules/commands.tcl:365
+msgid "Users port:"
+msgstr "Port u¿ytkowników:"
+
+#: /home/boogie/giana/modules/commands.tcl:335
+#: /home/boogie/giana/modules/commands.tcl:366
+msgid "Bots port:"
+msgstr "Port botów:"
+
+#: /home/boogie/giana/modules/commands.tcl:336
+#: /home/boogie/giana/modules/commands.tcl:354
+#: /home/boogie/giana/modules/commands.tcl:367
+msgid "Hosts:"
+msgstr "Hosty:"
+
+#: /home/boogie/giana/modules/commands.tcl:350
+msgid "Flags:"
+msgstr "Flagi:"
+
+#: /home/boogie/giana/modules/commands.tcl:376
+#: /home/boogie/giana/modules/commands.tcl:935
+msgid "Constans modes:"
+msgstr "Sta³e tryby:"
+
+#: /home/boogie/giana/modules/commands.tcl:378
+#: /home/boogie/giana/modules/commands.tcl:937
+msgid "Constans key:"
+msgstr "Sta³y klucz:"
+
+#: /home/boogie/giana/modules/commands.tcl:380
+#: /home/boogie/giana/modules/commands.tcl:940
+msgid "Current modes:"
+msgstr "Bie¿±ce tryby:"
+
+#: /home/boogie/giana/modules/commands.tcl:382
+msgid "I'm already on this channel."
+msgstr "Jestem aktualnie na tym kanale."
+
+#: /home/boogie/giana/modules/commands.tcl:384
+#: /home/boogie/giana/modules/commands.tcl:948
+msgid "I'm NOT already on this channel."
+msgstr "NIE jestem aktualnie na tym kanale."
+
+#: /home/boogie/giana/modules/commands.tcl:389
+msgid "No such user, channel or bot."
+msgstr "Nieznany u¿ytkownik, kana³ lub bot."
+
+#: /home/boogie/giana/modules/commands.tcl:399
+msgid "~~~%COWNERS COMMANDS%c~~~~"
+msgstr "~~~%CKOMENDY OWNERÓW%c~~~~"
+
+#: /home/boogie/giana/modules/commands.tcl:403
+msgid "~~~%CMASTERS COMMANDS%c~~~"
+msgstr "~~~%CKOMENDY MASTERÓW%c~~~"
+
+#: /home/boogie/giana/modules/commands.tcl:407
+msgid "~~~~%CUSERS COMMANDS%c~~~~"
+msgstr "~~~~%CKOMENDY USERÓW%c~~~~"
+
+#: /home/boogie/giana/modules/commands.tcl:415
+#: /home/boogie/giana/modules/help.tcl:41
+msgid "Commands list for you:"
+msgstr "Lista komend dla ciebie:"
+
+#: /home/boogie/giana/modules/commands.tcl:422
+msgid "Bye."
+msgstr "Zegnaj."
+
+#: /home/boogie/giana/modules/commands.tcl:446
+#: /home/boogie/giana/modules/commands.tcl:467
+#: /home/boogie/giana/modules/main.tcl:135
+msgid "Connecting to %C%0%c with VHost: %G%1%c."
+msgstr "£±czenie z %C%0%c z VHostem: %G%1%c."
+
+#: /home/boogie/giana/modules/commands.tcl:449
+#: /home/boogie/giana/modules/commands.tcl:470
+#: /home/boogie/giana/modules/main.tcl:138
+msgid "Connecting to %C%0%c."
+msgstr "£±czenie z %C%0%c."
+
+#: /home/boogie/giana/modules/commands.tcl:482
+msgid "Changing mode for channel %C%0%c:"
+msgstr "Zmiana trybu dla kana³u %C%0%c:"
+
+#: /home/boogie/giana/modules/commands.tcl:485
+#: /home/boogie/giana/modules/commands.tcl:1249
+#: /home/boogie/giana/modules/commands.tcl:1261
+#: /home/boogie/giana/modules/commands.tcl:1273
+#: /home/boogie/giana/modules/commands.tcl:1285
+#: /home/boogie/giana/modules/commands.tcl:1297
+#: /home/boogie/giana/modules/commands.tcl:1309
+#: /home/boogie/giana/modules/commands.tcl:1321
+#: /home/boogie/giana/modules/commands.tcl:1333
+#: /home/boogie/giana/modules/commands.tcl:1345
+#: /home/boogie/giana/modules/commands.tcl:1358
+#: /home/boogie/giana/modules/commands.tcl:1373
+#: /home/boogie/giana/modules/commands.tcl:1383
+#: /home/boogie/giana/modules/commands.tcl:1397
+#: /home/boogie/giana/modules/commands.tcl:1573
+msgid "I'm not channel operator on %C%0%c."
+msgstr "Nie jestem operatorem kana³u %C%0%c."
+
+#: /home/boogie/giana/modules/commands.tcl:491
+msgid "Mode for channel %C%0%c is:"
+msgstr "Tryb dla kana³u %C%0%c:"
+
+#: /home/boogie/giana/modules/commands.tcl:503
+msgid "I'm already on that channel."
+msgstr "Jestem ju¿ na tym kanale."
+
+#: /home/boogie/giana/modules/commands.tcl:506
+#: /home/boogie/giana/modules/commands.tcl:521
+#: /home/boogie/giana/modules/commands.tcl:540
+#: /home/boogie/giana/modules/commands.tcl:1224
+#: /home/boogie/giana/modules/main.tcl:1393
+msgid "%Y%0%y is not valid channel name!"
+msgstr "%Y%0%y nie jest poprawn± nazw± kana³u!"
+
+#: /home/boogie/giana/modules/commands.tcl:518
+#: /home/boogie/giana/modules/commands.tcl:537
+#: /home/boogie/giana/modules/commands.tcl:1218
+#: /home/boogie/giana/modules/on.tcl:663
+msgid "I'm not on channel %C%0%c."
+msgstr "Nie jestem na kanale %C%0%c."
+
+#: /home/boogie/giana/modules/commands.tcl:547
+msgid "Shutting down (by %0)"
+msgstr "Zamykanie (przez %0)"
+
+#: /home/boogie/giana/modules/commands.tcl:604
+msgid "I'm not connected to bot %Y%0%y."
+msgstr "Nie jestem po³±czony z botem %Y%0%y."
+
+#: /home/boogie/giana/modules/commands.tcl:607
+#: /home/boogie/giana/modules/commands.tcl:660
+#: /home/boogie/giana/modules/commands.tcl:1179
+#: /home/boogie/giana/modules/main.tcl:1591
+#: /home/boogie/giana/modules/main.tcl:1601
+msgid "%Y%0%y is not bot."
+msgstr "%Y%0%y nie jest botem."
+
+#: /home/boogie/giana/modules/commands.tcl:630
+msgid "Current link list:"
+msgstr "Bierz±ca lista linków:"
+
+#: /home/boogie/giana/modules/commands.tcl:635
+msgid "Link list has been erased."
+msgstr "Lista linków zosta³a wyczyszczona."
+
+#: /home/boogie/giana/modules/commands.tcl:647
+#: /home/boogie/giana/modules/commands.tcl:663
+#: /home/boogie/giana/modules/main.tcl:174
+#: /home/boogie/giana/modules/main.tcl:2322
+msgid "Unknown command '%0'. Type 'help' for get some help."
+msgstr "Nieznana komenda '%0'. Wpisz 'help' aby uzyskaæ pomoc."
+
+#: /home/boogie/giana/modules/commands.tcl:679
+#: /home/boogie/giana/modules/commands.tcl:696
+msgid "I'm already waiting for this answer."
+msgstr "Aktualnie czekam ju¿ na t± odpowiedz."
+
+#: /home/boogie/giana/modules/commands.tcl:682
+msgid "BotNet doesn't exist!"
+msgstr "BotNet nie istnieje!"
+
+#: /home/boogie/giana/modules/commands.tcl:699
+#: /home/boogie/giana/modules/main.tcl:962
+msgid "Users logged on:"
+msgstr "Zalogowani u¿ytkownicy:"
+
+#: /home/boogie/giana/modules/commands.tcl:701
+#: /home/boogie/giana/modules/main.tcl:967
+msgid "(at %C%0%c)"
+msgstr "(na %C%0%c)"
+
+#: /home/boogie/giana/modules/commands.tcl:708
+#: /home/boogie/giana/modules/commands.tcl:714
+msgid "Userlist has been saved."
+msgstr "Lista u¿ytkowników zosta³a zapisana."
+
+#: /home/boogie/giana/modules/commands.tcl:718
+msgid "Botlist has been saved."
+msgstr "Lista botów zosta³a zapisana."
+
+#: /home/boogie/giana/modules/commands.tcl:722
+msgid "Chanlist has been saved."
+msgstr "Lista kana³ów zosta³a zapisana."
+
+#: /home/boogie/giana/modules/commands.tcl:726
+#: /home/boogie/giana/modules/main.tcl:1203
+msgid "Bot configuration has been saved."
+msgstr "Konfiguracja bota zosta³a zapisana."
+
+#: /home/boogie/giana/modules/commands.tcl:732
+#: /home/boogie/giana/modules/commands.tcl:744
+#: /home/boogie/giana/modules/main.tcl:1205
+msgid "All lists has been saved."
+msgstr "Wszystkie listy zosta³y zapisane."
+
+#: /home/boogie/giana/modules/commands.tcl:746
+#: /home/boogie/giana/modules/commands.tcl:750
+#: /home/boogie/giana/modules/commands.tcl:754
+msgid "All lists has been sent."
+msgstr "Wszystkie listy zosta³y wys³ane."
+
+#: /home/boogie/giana/modules/commands.tcl:770
+#: /home/boogie/giana/modules/main.tcl:1411
+msgid "Flags %Y%0%y are not valid."
+msgstr "Flagi %Y%0%y nie s± poprawne."
+
+#: /home/boogie/giana/modules/commands.tcl:772
+msgid "Channel %C%0%c added with modes +%C%1%c."
+msgstr "Kana³ %C%0%c dodany z trybami +%C%1%c."
+
+#: /home/boogie/giana/modules/commands.tcl:793
+msgid "Channel %C%0%c removed from list."
+msgstr "Usuniêto kana³ %C%0%c z listy."
+
+#: /home/boogie/giana/modules/commands.tcl:798
+msgid "There is no channel matching %Y%0%y on list."
+msgstr "Nie ma kana³u pasuj±cego do %Y%0%y na li¶cie."
+
+#: /home/boogie/giana/modules/commands.tcl:815
+#: /home/boogie/giana/modules/main.tcl:1505
+msgid "Flags %0 are not valid."
+msgstr "Flagi %0 nie s± poprawne."
+
+#: /home/boogie/giana/modules/commands.tcl:818
+#: /home/boogie/giana/modules/commands.tcl:851
+msgid "Now channel %C%0%c has got following modes:"
+msgstr "Teraz kana³ %C%0%c ma nastêpuj±ce tryby:"
+
+#: /home/boogie/giana/modules/commands.tcl:837
+msgid "Please set key for channel %C%0%c by command: key."
+msgstr "Proszê ustawic klucz dla kana³u %C%0%c komenda: key."
+
+#: /home/boogie/giana/modules/commands.tcl:857
+msgid "Channel %C%0%c has got following modes:"
+msgstr "Kana³ %C%0%c ma nastêpuj±ce tryby:"
+
+#: /home/boogie/giana/modules/commands.tcl:860
+#: /home/boogie/giana/modules/commands.tcl:883
+#: /home/boogie/giana/modules/commands.tcl:910
+#: /home/boogie/giana/modules/commands.tcl:923
+#: /home/boogie/giana/modules/commands.tcl:1600
+#: /home/boogie/giana/modules/commands.tcl:1607
+#: /home/boogie/giana/modules/commands.tcl:1620
+msgid "There is no such channel."
+msgstr "Nie znaleziono kana³u."
+
+#: /home/boogie/giana/modules/commands.tcl:874
+msgid "Now key for channel %C%0%c is:"
+msgstr "Teraz klucz dla kana³u %C%0%c jest:"
+
+#: /home/boogie/giana/modules/commands.tcl:877
+msgid "Channel key for %C%0%c is:"
+msgstr "Klucz kana³u dla %C%0%c:"
+
+#: /home/boogie/giana/modules/commands.tcl:879
+msgid "There is no key set on that channel."
+msgstr "Nie ma klucza ustawionego na tym kanale."
+
+#: /home/boogie/giana/modules/commands.tcl:896
+msgid "Key for channel %C%0%c removed."
+msgstr "Klucz dla kana³u %C%0%c usuniêty."
+
+#: /home/boogie/giana/modules/commands.tcl:898
+msgid "There is no key for channel %C%0%c."
+msgstr "Nie ma klucza dla kana³u %C%0%c."
+
+#: /home/boogie/giana/modules/commands.tcl:932
+msgid "Channels list:"
+msgstr "Lista kana³ów:"
+
+#: /home/boogie/giana/modules/commands.tcl:942
+msgid "Current limit:"
+msgstr "Bierz±cy limit:"
+
+#: /home/boogie/giana/modules/commands.tcl:945
+msgid "Current key:"
+msgstr "Bierz±cy klucz:"
+
+#: /home/boogie/giana/modules/commands.tcl:953
+msgid "There is no channels on list."
+msgstr "Nie ma ¿adnych kana³ów na li¶cie."
+
+#: /home/boogie/giana/modules/commands.tcl:964
+msgid "Added following ban mask(s) for channel %C%0%c:"
+msgstr "Dodano nastêpuj±ce maski banów dla kana³u %C%0%c:"
+
+#: /home/boogie/giana/modules/commands.tcl:966
+#: /home/boogie/giana/modules/commands.tcl:1029
+#: /home/boogie/giana/modules/commands.tcl:1092
+msgid "I can't apply constans modes for channel, which is not on my channels list."
+msgstr "Nie mogê zastosowaæ sta³ych trybów dla kana³y, który nie jest na mojej li¶cie kana³ów."
+
+#: /home/boogie/giana/modules/commands.tcl:969
+#: /home/boogie/giana/modules/commands.tcl:987
+#: /home/boogie/giana/modules/commands.tcl:1032
+#: /home/boogie/giana/modules/commands.tcl:1050
+#: /home/boogie/giana/modules/commands.tcl:1095
+#: /home/boogie/giana/modules/commands.tcl:1113
+msgid "%0%y is not valid channel name."
+msgstr "%0%y nie jest poprawn± nazw± kana³u."
+
+#: /home/boogie/giana/modules/commands.tcl:982
+msgid "Removed ban masks matching '%B%0%c' for channel %C%1%c."
+msgstr "Usuniêto makski banów pasuj±ce do '%B%0%c' dla kana³u %C%1%c."
+
+#: /home/boogie/giana/modules/commands.tcl:984
+#: /home/boogie/giana/modules/commands.tcl:1012
+#: /home/boogie/giana/modules/commands.tcl:1047
+#: /home/boogie/giana/modules/commands.tcl:1110
+msgid "There is no ban masks for channel %C%0%c."
+msgstr "Nie ma masek banów dla kana³u %C%0%c."
+
+#: /home/boogie/giana/modules/commands.tcl:1027
+msgid "Added following exempt mask(s) for channel %C%0%c:"
+msgstr "Dodano nastêpuj±ce maski wyj±tków od banów dla kana³u %C%0%c:"
+
+#: /home/boogie/giana/modules/commands.tcl:1045
+msgid "Removed exempt masks matching '%B%0%c' for channel %C%1%c."
+msgstr "Usuniêto maski wyj±tków od banów pasuj±ce do '%C%0%c' dla kana³u %C%1%c."
+
+#: /home/boogie/giana/modules/commands.tcl:1075
+msgid "There is no exempt masks for channel %C%0%c."
+msgstr "Nie ma mask wyj±tków od bana dla kana³u %C%0%c."
+
+#: /home/boogie/giana/modules/commands.tcl:1090
+msgid "Added following invite mask(s) for channel %C%0%c:"
+msgstr "Dodano nastêpuj±ce maski zaproszeñ dla kana³u %C%0%c:"
+
+#: /home/boogie/giana/modules/commands.tcl:1108
+msgid "Removed invite masks matching '%B%0%c' for channel %C%1%c."
+msgstr "Usuniêto maski zaproszeñ pasuj±ce do '%C%0%c' dla kana³u %C%1%c."
+
+#: /home/boogie/giana/modules/commands.tcl:1138
+msgid "There is no invite masks for channel %C%0%c."
+msgstr "Nie ma mask wyj±tków od zaproszeñ dla kana³u %C%0%c."
+
+#: /home/boogie/giana/modules/commands.tcl:1160
+msgid "Connected to bot %C%0%c."
+msgstr "Po³±czono siê z botem %C%0%c."
+
+#: /home/boogie/giana/modules/commands.tcl:1170
+#: /home/boogie/giana/modules/main.tcl:447
+msgid "I can't connect to bot %C%0%c (%C%1%c:%C%2%c)."
+msgstr "Nie mogê po³±czyæ siê z botem %C%0%c (%C%1%c:%C%2%c)."
+
+#: /home/boogie/giana/modules/commands.tcl:1173
+#: /home/boogie/giana/modules/main.tcl:1585
+msgid "There is no port for bot %Y%0%y."
+msgstr "Nie ma portu dla bota %Y%0%y."
+
+#: /home/boogie/giana/modules/commands.tcl:1176
+#: /home/boogie/giana/modules/main.tcl:1588
+msgid "There is no address for bot %Y%0%y."
+msgstr "Nie ma adresu dla bota %Y%0%y."
+
+#: /home/boogie/giana/modules/commands.tcl:1191
+msgid "User %Y%0%y is unkickable."
+msgstr "Nie mo¿na wykopaæ u¿ytkownika %Y%0%y."
+
+#: /home/boogie/giana/modules/commands.tcl:1194
+msgid "%0%y isn't logged on me."
+msgstr "%0%y nie jest zalogowany na mnie."
+
+#: /home/boogie/giana/modules/commands.tcl:1206
+msgid "Users on channel %C%0%c:"
+msgstr "U¿ytkownicy na kanale %C%0%c:"
+
+#: /home/boogie/giana/modules/commands.tcl:1210
+msgid "Total users:"
+msgstr "Razem u¿ytkowników:"
+
+#: /home/boogie/giana/modules/commands.tcl:1211
+msgid "Topic:"
+msgstr "Temat:"
+
+#: /home/boogie/giana/modules/commands.tcl:1213
+#: /home/boogie/giana/modules/commands.tcl:1215
+msgid "Topic set by %C%0%c at %C%1%c."
+msgstr "Temat zosta³ ustawiony przez %C%0%c dnia %c%1%c."
+
+#: /home/boogie/giana/modules/commands.tcl:1221
+msgid "I'm not connected to any IRC server."
+msgstr "Nie jestem po³±czony z ¿adnym serwerem IRC."
+
+#: /home/boogie/giana/modules/commands.tcl:1231
+msgid "My name is:"
+msgstr "Nazywam siê:"
+
+#: /home/boogie/giana/modules/commands.tcl:1232
+msgid "My current nick:"
+msgstr "Mój aktualny nick:"
+
+#: /home/boogie/giana/modules/commands.tcl:1233
+msgid "My current server:"
+msgstr "Mój aktualny serwer:"
+
+#: /home/boogie/giana/modules/commands.tcl:1234
+msgid "Main nick:"
+msgstr "G³ówny nick:"
+
+#: /home/boogie/giana/modules/commands.tcl:1235
+msgid "Other nicks:"
+msgstr "Inne nicki:"
+
+#: /home/boogie/giana/modules/commands.tcl:1236
+msgid "Opened ports: %C%0%c (users) %C%1%c (bots)"
+msgstr "Otwarte porty: %C%0%c (u¿ytkownicy) %C%1%c (boty)"
+
+#: /home/boogie/giana/modules/commands.tcl:1237
+msgid "My host:"
+msgstr "Mój host:"
+
+#: /home/boogie/giana/modules/commands.tcl:1238
+msgid "Botnet flag:"
+msgstr "Flaga botnetu:"
+
+#: /home/boogie/giana/modules/commands.tcl:1239
+msgid "Botnet password:"
+msgstr "Has³o botnetu:"
+
+#: /home/boogie/giana/modules/commands.tcl:1240
+msgid "Writing main log:"
+msgstr "Zapisywanie g³ównego loga:"
+
+#: /home/boogie/giana/modules/commands.tcl:1241
+msgid "Server op protect:"
+msgstr "Ochrona przed server opem:"
+
+#: /home/boogie/giana/modules/commands.tcl:1246
+msgid "I give OP status to %C%0%c on %C%1%c."
+msgstr "Dajê status OP dla %C%0%c na %C%1%c."
+
+#: /home/boogie/giana/modules/commands.tcl:1258
+msgid "I take OP status from %C%0%c on %C%1%c."
+msgstr "Zabieram status OP od %C%0%c na %C%1%c."
+
+#: /home/boogie/giana/modules/commands.tcl:1270
+msgid "I give voice to %C%0%c on %C%1%c."
+msgstr "Dajê g³os dla %C%0%c na %C%1%c."
+
+#: /home/boogie/giana/modules/commands.tcl:1282
+msgid "I take voice from %C%0%c on %C%1%c."
+msgstr "Zabieram g³os dla %C%0%c na %C%1%c."
+
+#: /home/boogie/giana/modules/commands.tcl:1294
+msgid "I kick %C%0%c from %C%1%c."
+msgstr "Kopiê %C%0%c z %C%1%c."
+
+#: /home/boogie/giana/modules/commands.tcl:1306
+msgid "I set ban for %C%0%c on %C%1%c."
+msgstr "Ustawiam bana dla %C%0%c na %C%1%c."
+
+#: /home/boogie/giana/modules/commands.tcl:1318
+msgid "I set ban for %C%0%c on %C%1%c for time %C%2%c."
+msgstr "Ustawiam bana dla %C%0%c na %C%1%c na czas %C%2%c."
+
+#: /home/boogie/giana/modules/commands.tcl:1330
+msgid "I unset ban for %C%0%c on %C%1%c."
+msgstr "Zdejmujê bana dla %C%0%c na %C%1%c."
+
+#: /home/boogie/giana/modules/commands.tcl:1342
+msgid "I set ban-exempt for %C%0%c on %C%1%c."
+msgstr "Ustawiam wyj±tek od bana dla %C%0%c na %C%1%c."
+
+#: /home/boogie/giana/modules/commands.tcl:1355
+msgid "I unset ban-exempt for %C%0%c on %C%1%c."
+msgstr "Zdejmujê wyj±tek od bana dla %C%0%c na %C%1%c."
+
+#: /home/boogie/giana/modules/commands.tcl:1370
+msgid "I invite %C%0%c to channel %C%1%c."
+msgstr "Zapraszam %C%0%c na kana³ %C%1%c."
+
+#: /home/boogie/giana/modules/commands.tcl:1380
+msgid "I set invite-exempt for %C%0%c on %C%1%c."
+msgstr "Ustawiam wyj±tek od zaproszeñ dla %C%0%c na %C%1%c."
+
+#: /home/boogie/giana/modules/commands.tcl:1394
+msgid "I unset invite-exempt for %C%0%c on %C%1%c."
+msgstr "Zdejmujê wyj±tek od zaproszeñ dla %C%0%c na %C%1%c."
+
+#: /home/boogie/giana/modules/commands.tcl:1407
+msgid "List of available scripts:"
+msgstr "Lista dostêpnych skryptów:"
+
+#: /home/boogie/giana/modules/commands.tcl:1416
+msgid "Scripts list:"
+msgstr "Lista skryptów:"
+
+#: /home/boogie/giana/modules/commands.tcl:1420
+msgid "Libraries list:"
+msgstr "Lista bibliotek:"
+
+#: /home/boogie/giana/modules/commands.tcl:1435
+msgid "Script %C%0%c loaded."
+msgstr "Skrypt %C%0%c za³adowany."
+
+#: /home/boogie/giana/modules/commands.tcl:1437
+msgid "Script %Y%0%y not found."
+msgstr "Nie znaleziono skrypt %Y%0%y."
+
+#: /home/boogie/giana/modules/commands.tcl:1451
+msgid "User %C%0%c (%B%1%c) matched as %C%2%c."
+msgstr "U¿ytkownik %C%0%c (%B%1%c) dopasowany jako %C%2%c."
+
+#: /home/boogie/giana/modules/commands.tcl:1453
+msgid "I can't ident %C%0%c (%B%1%c)."
+msgstr "Nie mogê zidentyfikowaæ %C%0%c (%B%1%c)."
+
+#: /home/boogie/giana/modules/commands.tcl:1466
+#: /home/boogie/giana/modules/commands.tcl:1469
+#: /home/boogie/giana/modules/commands.tcl:1480
+#: /home/boogie/giana/modules/commands.tcl:1483
+#: /home/boogie/giana/modules/commands.tcl:1494
+#: /home/boogie/giana/modules/commands.tcl:1497
+msgid "%C%0%c flood sensor is now %C%1%c."
+msgstr "%cSensor powodzi %C%0%c jest teraz %C%1%c."
+
+#: /home/boogie/giana/modules/commands.tcl:1472
+#: /home/boogie/giana/modules/commands.tcl:1486
+#: /home/boogie/giana/modules/commands.tcl:1500
+msgid "Value for %C%0%c flood sensor is now:"
+msgstr "%cWarto¶æ dla sensora powodzi %C%0%c jest teraz równa:"
+
+#: /home/boogie/giana/modules/commands.tcl:1510
+msgid "Flood sensors:"
+msgstr "Sensory powodzi:"
+
+#: /home/boogie/giana/modules/commands.tcl:1511
+msgid "Public"
+msgstr "Publiczny"
+
+#: /home/boogie/giana/modules/commands.tcl:1512
+msgid "Nick change"
+msgstr "Zmian nicka"
+
+#: /home/boogie/giana/modules/commands.tcl:1513
+msgid "Join"
+msgstr "Do³±czeñ"
+
+#: /home/boogie/giana/modules/commands.tcl:1514
+msgid "Values means allowed number of actions for each 10 seconds. To change any value:"
+msgstr "Warto¶ci oznaczaj± dozwolon± ilo¶æ akcji dla ka¿dych 10 sekund. Aby zmieniæ któr±kolwiek warto¶æ:"
+
+#: /home/boogie/giana/modules/commands.tcl:1519
+msgid "I started %C%0%c ago."
+msgstr "Wystartowa³em %C%0%c temu."
+
+#: /home/boogie/giana/modules/commands.tcl:1557
+msgid "Servers list:"
+msgstr "Lista serwerów:"
+
+#: /home/boogie/giana/modules/commands.tcl:1560
+msgid "I'm on that server."
+msgstr "Jestem na tym serwerze."
+
+#: /home/boogie/giana/modules/commands.tcl:1580
+msgid "I'm %C%0%c."
+msgstr "Jestem %C%0%c."
+
+#: /home/boogie/giana/modules/commands.tcl:1587
+#: /home/boogie/giana/modules/commands.tcl:1590
+msgid "No command executed so far."
+msgstr "¯adna komenda nie zosta³a wykonana jak na razie."
+
+#: /home/boogie/giana/modules/commands.tcl:1636
+msgid "Bot evirnoment:"
+msgstr "¦rodowisko bota:"
+
+#: /home/boogie/giana/modules/commands.tcl:1649
+msgid "This is unknown encoding system."
+msgstr "To jest nieznany system kodowania."
+
+#: /home/boogie/giana/modules/commands.tcl:1652
+#: /home/boogie/giana/modules/commands.tcl:1656
+msgid "Now variable %C%0%c evaluates:"
+msgstr "Teraz zmienna %C%0%c wynosi:"
+
+#: /home/boogie/giana/modules/commands.tcl:1659
+msgid "This variable can't be changed by command var."
+msgstr "Ta zmienna nie mo¿e byæ zmieniona komend± var."
+
+#: /home/boogie/giana/modules/commands.tcl:1667
+msgid "No such variable."
+msgstr "Nieznana zmienna."
+
+#: /home/boogie/giana/modules/main.tcl:34
+#: /home/boogie/giana/modules/main.tcl:58
+msgid "Registering connection on %0."
+msgstr "Rejestracja po³±czenia na %0."
+
+#: /home/boogie/giana/modules/main.tcl:38
+msgid "I can't connect to server %0 (%1)"
+msgstr "Nie mogê po³±czyæ siê z serwerem %0 (%1)"
+
+#: /home/boogie/giana/modules/main.tcl:62
+msgid "I can't connect to server"
+msgstr "Nie mogê po³±czyæ siê z serwerem"
+
+#: /home/boogie/giana/modules/main.tcl:91
+msgid "Connection with server %C%0%c lost."
+msgstr "Po³±czenie z serwerem %C%0%c utracone."
+
+#: /home/boogie/giana/modules/main.tcl:142
+msgid "No server found on list. Please correct bot configuration file."
+msgstr "Nie znaleziono serwera na li¶cie. Proszê skorygowaæ plik konfiguracyjny bota."
+
+#: /home/boogie/giana/modules/main.tcl:198
+msgid "Port opened:      %0"
+msgstr "Otwarty port:     %0"
+
+#: /home/boogie/giana/modules/main.tcl:200
+msgid "Can't open port %0!"
+msgstr "Nie mo¿na otworzyæ portu %0!"
+
+#: /home/boogie/giana/modules/main.tcl:208
+#: /home/boogie/giana/modules/on.tcl:246
+msgid "Incomming connection from %C%0%c on users port."
+msgstr "Nadchodzi po³±czenie z %C%0%c na porcie u¿ytkowników."
+
+#: /home/boogie/giana/modules/main.tcl:257
+#: /home/boogie/giana/modules/main.tcl:275
+#: /home/boogie/giana/modules/main.tcl:324
+msgid "%0 has logged on."
+msgstr "%0 zalogowa³ siê."
+
+#: /home/boogie/giana/modules/main.tcl:298
+#: /home/boogie/giana/modules/config.tcl:292
+msgid "Type password:"
+msgstr "Podaj has³o:"
+
+#: /home/boogie/giana/modules/main.tcl:306
+#: /home/boogie/giana/modules/config.tcl:297
+msgid "Retype password:"
+msgstr "Powtórz has³o:"
+
+#: /home/boogie/giana/modules/main.tcl:327
+#: /home/boogie/giana/modules/main.tcl:336
+#: /home/boogie/giana/modules/config.tcl:287
+msgid "Type name for first user:"
+msgstr "Podaj nazwê dla pierwszego u¿ytkownika:"
+
+#: /home/boogie/giana/modules/main.tcl:368
+msgid "Last logged on user:"
+msgstr "Ostatnio zalogowany u¿ytkownik:"
+
+#: /home/boogie/giana/modules/main.tcl:370
+msgid "%C%0%c has logged on."
+msgstr "%C%0%c zalogowa³ siê."
+
+#: /home/boogie/giana/modules/main.tcl:415
+msgid "%C%0%c has logged off."
+msgstr "%C%0%c wylogowa³ siê."
+
+#: /home/boogie/giana/modules/main.tcl:416
+msgid "%0 has logged off."
+msgstr "%0 wylogowa³ siê."
+
+#: /home/boogie/giana/modules/main.tcl:437
+msgid "I'm connecting to bot %C%0%c."
+msgstr "£±czê siê z botem %C%0%c."
+
+#: /home/boogie/giana/modules/main.tcl:458
+msgid "Incomming connection from %C%0%c on bots port."
+msgstr "Nadchodzi po³±czenie z %C%0%c na porcie botów."
+
+#: /home/boogie/giana/modules/main.tcl:485
+#: /home/boogie/giana/modules/main.tcl:514
+msgid "Connection with bot %C%0%c established."
+msgstr "Po³±czenie z botem %C%0%c nawi±zane."
+
+#: /home/boogie/giana/modules/main.tcl:493
+msgid "%C%0%c has got same flag. It is not allowed."
+msgstr "%C%0%c ma tak± sam± flagê. To nie jest dozwolone."
+
+#: /home/boogie/giana/modules/main.tcl:498
+msgid "%C%0%c gave wrong network password or my bot name."
+msgstr "%C%0%c poda³ z³e has³o sieci lub moj± nazwê bota."
+
+#: /home/boogie/giana/modules/main.tcl:504
+msgid "I'm sending login and password to %C%0%c:%C%1%c."
+msgstr "Wysy³am login i has³o do %C%0%c:%C%1%c."
+
+#: /home/boogie/giana/modules/main.tcl:522
+msgid "%C%0%c is not bot, which I want connect to."
+msgstr "%C%0%c nie jest botem, z którym chcê siê po³±czyæ."
+
+#: /home/boogie/giana/modules/main.tcl:527
+msgid "Host %C%0%c on port %C%1%c is not Giana bot."
+msgstr "Host %C%0%c na porcie %C%1%c nie jest botem Giana."
+
+#: /home/boogie/giana/modules/main.tcl:539
+msgid "Connection with %C%0%c lost."
+msgstr "Po³±czenie z %C%0%c utracone."
+
+#: /home/boogie/giana/modules/main.tcl:548
+msgid "Connection with bot %C%0%c lost."
+msgstr "Po³±czenie z botem %C%0%c utracone."
+
+#: /home/boogie/giana/modules/main.tcl:896
+#: /home/boogie/giana/modules/main.tcl:924
+msgid "That's me!"
+msgstr "To ja!"
+
+#: /home/boogie/giana/modules/main.tcl:905
+msgid "BotNet tree:"
+msgstr "Drzewo BotNet'u:"
+
+#: /home/boogie/giana/modules/main.tcl:909
+msgid "End of BotNet tree. Total bots:"
+msgstr "Koniec drzewa BotNet'u. Ogó³em botów:"
+
+#: /home/boogie/giana/modules/main.tcl:910
+msgid "Missing bots:"
+msgstr "Brakuj±ce boty:"
+
+#: /home/boogie/giana/modules/main.tcl:1199
+msgid "Daily saving lists and config..."
+msgstr "Dzienne zapisywanie list i konfiguracji..."
+
+#: /home/boogie/giana/modules/main.tcl:1416
+#: /home/boogie/giana/modules/main.tcl:1453
+msgid "Now %C%0%c has got following flags on %C%1%c:"
+msgstr "Teraz %C%0%c ma nastêpuj±ce flagi na %C%1%c:"
+
+#: /home/boogie/giana/modules/main.tcl:1418
+#: /home/boogie/giana/modules/main.tcl:1458
+msgid "Now %C%0%c has got following flags:"
+msgstr "Teraz %C%0%c ma nastêpuj±ce flagi:"
+
+#: /home/boogie/giana/modules/main.tcl:1421
+#: /home/boogie/giana/modules/main.tcl:1464
+msgid "Flags %Y%0%y collides with itself. User can't got flags for enemy and friend at same time."
+msgstr "Flagi %Y%0%y koliduj± ze sob±. U¿ytkownik nie mo¿e mieæ flag wrogów i przyjació³ jednocze¶nie."
+
+#: /home/boogie/giana/modules/main.tcl:1461
+msgid "Flags %Y%0%y collides with %Y%1%y. User can't got flags for enemy and friend at same time."
+msgstr "Flagi %Y%0%y koliduj± z %Y%1%y. U¿ytkownik nie mo¿e mieæ flag dla przyjació³ i wrogów jednocze¶nie."
+
+#: /home/boogie/giana/modules/main.tcl:1471
+msgid "You can do no changes for %Y%0%y."
+msgstr "Nie mo¿esz zrobiæ ¿adnych zmian dla %Y%0%y."
+
+#: /home/boogie/giana/modules/main.tcl:1479
+msgid "%C%0%c has got following flags on %C%1%c:"
+msgstr "%C%0%c ma nastêpuj±ce flagi na %C%1%c:"
+
+#: /home/boogie/giana/modules/main.tcl:1481
+msgid "%C%0%c has got no flags on %C%1%c."
+msgstr "%C%0%c nie ma ¿adnych flag na %C%1%c."
+
+#: /home/boogie/giana/modules/main.tcl:1484
+#: /home/boogie/giana/modules/main.tcl:1541
+msgid "%C%0%c has got following flags:"
+msgstr "%C%0%c ma nastêpuj±ce flagi:"
+
+#: /home/boogie/giana/modules/main.tcl:1488
+msgid "Unknown user"
+msgstr "Nieznany u¿ytkownik"
+
+#: /home/boogie/giana/modules/main.tcl:1508
+#: /home/boogie/giana/modules/main.tcl:1535
+msgid "Now %C%0%c has got following botflags:"
+msgstr "Teraz %C%0%c ma nastêpuj±ce botflagi:"
+
+#: /home/boogie/giana/modules/main.tcl:1544
+msgid "Unknown bot %Y%0%y."
+msgstr "Nieznany bot %Y%0%y."
+
+#: /home/boogie/giana/modules/main.tcl:1582
+msgid "I'm already linked with bot %Y%0%y."
+msgstr "Jestem juz zlinkowany z botem %Y%0%y."
+
+#: /home/boogie/giana/modules/main.tcl:1607
+msgid "Adding following bots to link list:"
+msgstr "Dodawanie nastêpuj±cych botów do listy linków:"
+
+#: /home/boogie/giana/modules/main.tcl:1614
+msgid "Removing following bots from link list:"
+msgstr "Usuwanie nastêpuj±cych botów z listy linków:"
+
+#: /home/boogie/giana/modules/main.tcl:1623
+msgid "Link list has been rehashed."
+msgstr "Lista linków zosta³a odnowiona."
+
+#: /home/boogie/giana/modules/main.tcl:2294
+msgid "Given VHost doesn't work. Bot will use defaul hostname (%0)."
+msgstr "Podany VHost nie dzia³a. Bot u¿yje domy¶lnej nazwy hosta (%0)."
+
+#: /home/boogie/giana/modules/main.tcl:2297
+msgid "Bot can't set up his socket with default hostname. Perahps network on this machine doesn't work."
+msgstr "Bot nie mo¿e otworzyæ gniazda z domy¶ln± nazw± hosta. Prawdopodobnie sieæ na twojej maszynie nie dzia³a."
+
+#: /home/boogie/giana/modules/main.tcl:2325
+msgid "Giana v%0 by Googie"
+msgstr "Giana v%0 autor Googie"
+
+#: /home/boogie/giana/modules/main.tcl:2328
+msgid "Hostname:         %0 (%1)"
+msgstr "Nazwa hosta:      %0 (%1)"
+
+#: /home/boogie/giana/modules/main.tcl:2360
+msgid "File %0 doesn't exist. Remove this line from config."
+msgstr "Plik %0 nie istnieje. Usuñ t± linie z konfiga."
+
+#: /home/boogie/giana/modules/main.tcl:2387
+msgid "Interactive Mode."
+msgstr "Tryb interaktywny."
+
+#: /home/boogie/giana/modules/on.tcl:16
+msgid "I've joined channel %0"
+msgstr "Do³±czy³em do kana³u %0"
+
+#: /home/boogie/giana/modules/on.tcl:42
+msgid "%0 (%1) has joined channel %2."
+msgstr "%0 (%1) do³±czy³ do kana³u %2"
+
+#: /home/boogie/giana/modules/on.tcl:73
+msgid "I've left channel %0"
+msgstr "Wyszed³em z kana³u %0"
+
+#: /home/boogie/giana/modules/on.tcl:92
+msgid "%0 (%1) has left channel %2 %3"
+msgstr "%0 (%1) opu¶ci³ kana³ %2 %3"
+
+#: /home/boogie/giana/modules/on.tcl:109
+msgid "%0 (%1) has been kicked from %2 by %3 (%4) :%5"
+msgstr "%0 (%1) zosta³ wykopany z %2 przez %3 (%4) :%5"
+
+#: /home/boogie/giana/modules/on.tcl:136
+msgid "I've been kicked from channel %0 by %1"
+msgstr "Zosta³em wykopany z kana³u %0 przez %1"
+
+#: /home/boogie/giana/modules/on.tcl:178
+msgid "I've changed my nick to %C%0%c."
+msgstr "Zmieni³em mojego nicka na %C%0%c."
+
+#: /home/boogie/giana/modules/on.tcl:184
+msgid "%0 (%1) has changed nick to %2."
+msgstr "%0 (%1) zmieni³ nick na %2."
+
+#: /home/boogie/giana/modules/on.tcl:199
+msgid "I've been killed by %0 (%1)."
+msgstr "Zosta³em zabity przez %0 (%1)."
+
+#: /home/boogie/giana/modules/on.tcl:203
+msgid "I've been killd by %0 (%1)!"
+msgstr "Zosta³em zabity przez %0 (%1)!"
+
+#: /home/boogie/giana/modules/on.tcl:217
+msgid "%0 (%1) has left irc :%2"
+msgstr "%0 (%1) wyszed³ z irca :%2"
+
+#: /home/boogie/giana/modules/on.tcl:444
+msgid "%0 (%1) has changed mode on channel %2 to:"
+msgstr "%0 (%1) zmieni³ tryb kana³u %2 na:"
+
+#: /home/boogie/giana/modules/on.tcl:459
+msgid "My user mode has been changed:"
+msgstr "Mój tryb u¿ytkownika zosta³ zmieniony:"
+
+#: /home/boogie/giana/modules/on.tcl:487
+msgid "%0 (%1) has changed topic for channel %2 to:"
+msgstr "%0 (%1) zmieni³ temat kana³u %2 na:"
+
+#: /home/boogie/giana/modules/on.tcl:509
+msgid "Successful registered on server %C%0%c with nick %C%1%c."
+msgstr "Pomy¶lnie zarejestrowany na serwerze %C%0%c z nickiem %C%1%c."
+
+#: /home/boogie/giana/modules/on.tcl:539
+msgid "Channel %0 scanned."
+msgstr "Kana³ %0 zeskanowany."
+
+#: /home/boogie/giana/modules/on.tcl:646
+msgid "I can't change nick, because it contains not allowed chars."
+msgstr "Nie mogê zmieniæ nicka, poniewa¿ zawiera on niedozwolone znaki."
+
+#: /home/boogie/giana/modules/on.tcl:657
+msgid "I can't change nick, because it is already in use."
+msgstr "Nie mogê zmieniæ nicka, poniewa¿ jest aktualnie w u¿yciu."
+
+#: /home/boogie/giana/modules/on.tcl:665
+msgid "%C%0%c is not on channel %C%1%c."
+msgstr "%C%0%c nie jest na kanale %C%1%c."
+
+#: /home/boogie/giana/modules/on.tcl:669
+msgid "I've received message from server:"
+msgstr "Otrzyma³em wiadomo¶æ od serwera:"
+
+#: /home/boogie/giana/modules/on.tcl:697
+msgid "There is maximum number of bans on %C%0%c."
+msgstr "Osi±gniêto maksymaln± liczbê banów na %C%0%c."
+
+#: /home/boogie/giana/modules/on.tcl:705
+msgid "My connection is restricted!"
+msgstr "Moje po³±czenie podlega restrykcji!"
+
+#: /home/boogie/giana/modules/on.tcl:708
+msgid "Bot connection is restricted! Shutting down..."
+msgstr "Po³±czenie bota podlega restrykcji! Zamykanie..."
+
+#: /home/boogie/giana/modules/on.tcl:716
+msgid "Connection with server %0 lost."
+msgstr "Po³±czenie z serwerem %0 utracone."
+
+#: /home/boogie/giana/modules/scripting.tcl:349
+#: /home/boogie/giana/modules/help.tcl:31
+msgid "Syntax is:"
+msgstr "Sk³adnia:"
+
+#: /home/boogie/giana/modules/scripting.tcl:949
+msgid "Can't load script %0. It's required by %1 script."
+msgstr "Nie mo¿na za³adowaæ skryptu %0. Jest on wymagany przez skrypt %1."
+
+#: /home/boogie/giana/modules/scripting.tcl:1012
+msgid "Can't read library:"
+msgstr "Nie mo¿na odczytaæ biblioteki:"
+
+#: /home/boogie/giana/modules/config.tcl:42
+msgid "Choose name of bot (it's not nickname) [%0]:"
+msgstr "Wybierz nazwê bota (to nie jest nick) [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:48
+msgid "Users port [%0]:"
+msgstr "Port u¿ytkowników [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:54
+msgid "Bots port [%0]:"
+msgstr "Port botów [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:60
+msgid "Login question [%0]:"
+msgstr "Zapytanie o login [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:66
+msgid "Password question [%0]:"
+msgstr "Zapytanie o has³o [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:73
+msgid "Main nickname [%0]:"
+msgstr "G³ówny nick [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:80
+msgid "Secondary nicknames (ex. nick1 nick2 nick3) [%0]:"
+msgstr "Dodatkowe nicki (np nick1 nick2 nick3) [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:86
+msgid "Bots network flag status [%0]:"
+msgstr "Flaga statusu w sieci botów [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:92
+msgid "Bots network password [%0]:"
+msgstr "Has³o sieci botów [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:98
+msgid "Public commands char [%0]:"
+msgstr "Znak komend publicznych [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:104
+msgid "Kick vitcim when friend has set ban (ON/OFF) [%0]:"
+msgstr "Kop ofiary, gdy bana zak³ada przyjaciel (ON/OFF) [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:110
+msgid "Allow to execute commands via private and channel messages by dump public command? (ON/OFF) [%0]:"
+msgstr "Pozwoliæ na wykonywanie komend przez prywatne i publiczne wiadomo¶ci, przez publiczn± komendê dump? (ON/OFF) [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:117
+msgid "Enter servers names (with optional port - server.name:port). For each name, push an enter. When you finish, just push the enter without any server name."
+msgstr "Podaj nazwy serwerów (z opcjonalnym portem - nazwa.serwera:port). Dla ka¿dej nazwy, wci¶nij enter. Kiedy skoñczysz, po prostu wci¶nij enter bez ¿adnej nazwy serwera."
+
+#: /home/boogie/giana/modules/config.tcl:119
+msgid "Server:"
+msgstr "Serwer:"
+
+#: /home/boogie/giana/modules/config.tcl:127
+msgid "Similarly do with TCL additional scripts now. There is a list of available scripts below. You can ommit .tcl extension in file name."
+msgstr "Podobnie zrób teraz z dodatkowymi skryptami TCL. Poni¿ej jest lista dostêpnych skryptów. Mo¿esz pomin±æ rozsze¿enie .tcl w nazwie pliku."
+
+#: /home/boogie/giana/modules/config.tcl:130
+msgid "Script:"
+msgstr "Skrypt:"
+
+#: /home/boogie/giana/modules/config.tcl:137
+msgid "Do you want to enter optional config values? (n/y) [N]:"
+msgstr "Czy chcesz podaæ opcjonalne warto¶ci konfiguracyjne? [N]:"
+
+#: /home/boogie/giana/modules/config.tcl:149
+msgid "Would you like to create first user? (n/y) [Y]:"
+msgstr "Czy chcesz stworzyæ pierwszego u¿ytkownika? (n/y) [Y]:"
+
+#: /home/boogie/giana/modules/config.tcl:163
+msgid "Modes checking loop delay [%0]:"
+msgstr "Opó¼nienie pêtli sprawdzania trybów [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:169
+msgid "List of available logos:"
+msgstr "Lista dostêpnych logo:"
+
+#: /home/boogie/giana/modules/config.tcl:170
+msgid "Login logo [%0]:"
+msgstr "Logo logowania [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:176
+msgid "Reason for 'kick queue' kicks [%0]:"
+msgstr "Komentarz dla kopniêæ 'kolejki kopania' [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:182
+msgid "Public messages flood sensor (OFF/ON) [%0]:"
+msgstr "Sensor wiadomo¶ci publicznych (ON/OFF) [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:189
+msgid "Value of this sensor (how many messages per 10 secs are permitted) [%0]:"
+msgstr "Warto¶æ dla tego sensora (ile wiadomo¶ci na 10 sekund jest dozwolone) [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:196
+msgid "Nick changing flood sensor (OFF/ON) [%0]:"
+msgstr "Sensor zmian nicków (ON/OFF) [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:203
+msgid "Value of this sensor (how many changes per 10 secs are permitted) [%0]:"
+msgstr "Warto¶æ dla tego sensora (ile zmian na 10 sekund jest dozwolone) [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:210
+msgid "Channel joining flood sensor (OFF/ON) [%0]:"
+msgstr "Sensor do³±czeñ do kana³u (ON/OFF) [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:217
+msgid "Value of this sensor (how many joins per 10 secs are permitted) [%0]:"
+msgstr "Warto¶æ dla tego sensora (ile do³±czeñ na 10 sekund jest dozwolone) [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:224
+msgid "Virtual host, which should be used while connecting to server [%0]:"
+msgstr "Wirtualny host, który powinien byæ u¿yty podczas ³±czenia z serwerem [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:230
+msgid "Should bot log all important events? (OFF/ON) [%0]:"
+msgstr "Czy bot powinien logowaæ wszystkie wa¿ne zdarzenia? (ON/OFF) [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:236
+msgid "Which logging mode use to log from channels? (supported: %1) [%0]:"
+msgstr "Którego trybu logowania u¿yæ do logowania z kana³ów? (obs³ugiwane: %1) [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:242
+msgid "Which char use to pad nicknames in logs up to 9 chars long? (only 'giana' logging mode) [%0]:"
+msgstr "Jakiego znaku u¿yæ do dope³niania nicków do d³ugo¶ci 9 znaków? (tylko w trybie logowania 'giana') [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:248
+msgid "Shell we load help module? (yes/no) [%0]:"
+msgstr "Czy powinni¶my ³adowaæ modu³ pomocy? (yes/no) [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:255
+msgid "Username for bot [%0]:"
+msgstr "Nazwa u¿ytkownika dla bota [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:261
+msgid "Protect from server op mode? (ON/OFF) [%0]:"
+msgstr "Obrona przed nadaniem statusu operatora przez serwer (ON/OFF) [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:268
+msgid "Language (%1) [%0]:"
+msgstr "Jêzyk (%1) [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:275
+msgid "SUPPORTED ENCODING SYSTEMS:"
+msgstr "OBS£UGIWANE SYSTEMY KODOWANIA:"
+
+#: /home/boogie/giana/modules/config.tcl:276
+msgid "Encoding system [%0]:"
+msgstr "System kodowania [%0]:"
+
+#: /home/boogie/giana/modules/config.tcl:313
+msgid "Passwords mismatch!"
+msgstr "Niezgodno¶æ hase³!"
+
+#: /home/boogie/giana/modules/config.tcl:338
+#: /home/boogie/giana/modules/config.tcl:343
+msgid "Writting config done..."
+msgstr "Zapisywanie konfiga zakoñczone..."
+
+#: /home/boogie/giana/modules/help.tcl:32
+msgid "Alias(es):"
+msgstr "Alias(y):"
+
+#: /home/boogie/giana/modules/help.tcl:33
+msgid "Description:"
+msgstr "Opis:"
+
+#: /home/boogie/giana/modules/help.tcl:35
+msgid "No help available for command %Y%0%y."
+msgstr "Nie ma dostêpnej pomocy dla komendy %Y%0%y."
+
+#: /home/boogie/giana/modules/help.tcl:38
+msgid "Help: Unknown command."
+msgstr "Help: Nieznana komenda."
+
+#: /home/boogie/giana/modules/help.tcl:87
+msgid "Command %0 hasn't got help."
+msgstr "Komenda %0 nie posiada pomocy."
+
+#: /home/boogie/giana/giana.tcl:98
+msgid "Syntax: %0 [options] <bot>"
+msgstr "Sk³adnia: %0 [opcje] <bot>"
+
+#: /home/boogie/giana/giana.tcl:101
+msgid "Kills given bot."
+msgstr "Zabija danego bota."
+
+#: /home/boogie/giana/giana.tcl:102
+msgid "Interactive mode. Console from standart input (keyboard)."
+msgstr "Tryb interaktywny. Konsola ze standardowego wej¶cia (klawiatury)."
+
+#: /home/boogie/giana/giana.tcl:103
+msgid "Connects with given bot."
+msgstr "£±czy z danym botem."
+
+#: /home/boogie/giana/giana.tcl:104
+msgid "Displays memory usage for given bot."
+msgstr "Wy¶wietla u¿ycie pamiêci dla danego bota."
+
+#: /home/boogie/giana/giana.tcl:105
+msgid "Lists bots found in config directory and notices if they are up or down."
+msgstr "Listuje boty znalezione w katalogu config i informuje czy s± uruchomione czy nie."
+
+#: /home/boogie/giana/giana.tcl:106
+msgid "Interactive generating configuration file."
+msgstr "Interaktywne generowanie pliku konfiguracyjnego."
+
+#: /home/boogie/giana/giana.tcl:107
+msgid "Runs editor and opens configuration file for given bot."
+msgstr "Uruchamia edytor i otwiera plik konfiguracyjny dla danego bota."
+
+#: /home/boogie/giana/giana.tcl:108
+msgid "If pico is found, then it's used to edit, otherwise vi is used."
+msgstr "Je¶li pico jest znalezione, wtedy ono jest u¿ywane do edycji, inaczej vi jest u¿yte."
+
+#: /home/boogie/giana/giana.tcl:109
+msgid "Removes all files of given bot."
+msgstr "Usuwa wszystkie pliki danego bota."
+
+#: /home/boogie/giana/giana.tcl:110
+msgid "Runs bot with given username."
+msgstr "Uruchamia bota z dana nazw± u¿ytkownika."
+
+#: /home/boogie/giana/giana.tcl:111
+msgid "Runs bot with given virtual host."
+msgstr "Uruchamia bota z danym hostem wirtualnym."
+
+#: /home/boogie/giana/giana.tcl:112
+msgid "Installs given bot in crontab."
+msgstr "Instaluje danego bot w crontabie."
+
+#: /home/boogie/giana/giana.tcl:113
+msgid "Bot will not connect to a server upon startup."
+msgstr "Bot nie bêdzie siê ³±czy³ z serwerem na starcie."
+
+#: /home/boogie/giana/giana.tcl:114
+msgid "Debugging mode. Given debug level could be 0-2."
+msgstr "Tryb debugowania. Dany poziom debugowania mo¿e byæ 0-2."
+
+#: /home/boogie/giana/giana.tcl:115
+msgid "You will be able to see outgoing and incoming data from server."
+msgstr "Bêdziesz móg³ zobaczyæ wychodz±ce i przychodz±ce z serwera dane."
+
+#: /home/boogie/giana/giana.tcl:116
+msgid "If you know that bot will got restriction, but you still want to run it."
+msgstr "Gdy wiesz ¿e bot bêdzie mia³ restrykcjê, ale wci±¿ chcesz go uruchomiæ."
+
+#: /home/boogie/giana/giana.tcl:117
+msgid "Runs bot with given translation. This version supports following translations:"
+msgstr "Uruchamia bota z danym t³umaczeniem. Ta wersja obs³uguje nastêpuj±ce t³umaczenia:"
+
+#: /home/boogie/giana/giana.tcl:119
+msgid "Shows debug log file of given bot."
+msgstr "Pokazuje plik z logiem debugowania dla danego bota."
+
+#: /home/boogie/giana/giana.tcl:120
+msgid "Optional arguments are: file, locale. Script reads given (or default - commands.tcl) file"
+msgstr "Opcjonalne argumenty: plik, jêzyk. Skrypt czyta dany (lub domy¶lny - commands.tcl) plik"
+
+#: /home/boogie/giana/giana.tcl:121
+msgid "and checks if all aliases has got readable (for help.tcl module) help introductions"
+msgstr "i sprawdza czy wszystkie aliasy maj± czytelne (dla modu³u help.tcl) instrukcje pomocy."
+
+#: /home/boogie/giana/giana.tcl:122
+msgid "for given (or default - en) locale. If not, then reports them."
+msgstr "dla danego (lub domy¶lnego - en) jêzyka. Je¶li nie, to sk³ada o tym raport."
+
+#: /home/boogie/giana/giana.tcl:123
+msgid "You're just reading this."
+msgstr "W³a¶nie to czytasz."
+
+#: /home/boogie/giana/giana.tcl:124
+msgid "Shows version."
+msgstr "Pokazuje wersjê."
+
+#: /home/boogie/giana/giana.tcl:127
+msgid "TCL version is %0. It's too old. Giana requires at least 8.4."
+msgstr "Wersja TCL'a to %0. Jest za stary. Giana potrzebuje 8.4."
+
+#: /home/boogie/giana/giana.tcl:129
+msgid "Used this tclsh:"
+msgstr "U¿yto tego tclsh:"
+
+#: /home/boogie/giana/giana.tcl:131
+msgid "If you have 2 or more tcl distributions in system, you have to\nedit this file and read header for help."
+msgstr "Je¶li masz 2 lub wiêcej dystrybucji tcl w systemie, musisz\nedytowaæ ten plik i przeczytaæ nag³ówek."
+
+#: /home/boogie/giana/giana.tcl:133
+msgid "Don't try to remove this from code. If TCL is too old\n  then there will be a lot of errors. Application will crash."
+msgstr "Nie próbuj usun±æ tego kodu. Je¶li TCL jest zbyt stary\n  to bêdzie du¿o b³êdów. Aplikacja ulegnie zatrzymaniu."
+
+#: /home/boogie/giana/giana.tcl:173
+msgid "Bot killed."
+msgstr "Bot zabity."
+
+#: /home/boogie/giana/giana.tcl:175
+msgid "Bot %0 wasn't up."
+msgstr "Bot %0 nie by³ uruchomiony."
+
+#: /home/boogie/giana/giana.tcl:178
+#: /home/boogie/giana/giana.tcl:212
+msgid "Bot PID file not found. Looked for %0."
+msgstr "Nie znaleziono pliku PID bota. Szukano %0."
+
+#: /home/boogie/giana/giana.tcl:195
+#: /home/boogie/giana/giana.tcl:389
+msgid "File %0 doesn't exists or it's not readable."
+msgstr "Plik %0 nie istnieje lub jest nieczytelny."
+
+#: /home/boogie/giana/giana.tcl:207
+msgid "Bot %0 use %1 KB of memory."
+msgstr "Bot %0 u¿ywa %1 KB pamiêci."
+
+#: /home/boogie/giana/giana.tcl:209
+msgid "Can't find bot process. Perhaps it isn't up."
+msgstr "Nie mo¿na znale¼æ procesu bota. Prawdopodobnie nie jest on uruchomiony."
+
+#: /home/boogie/giana/giana.tcl:219
+msgid "Bot name         [+ = up, X = down]"
+msgstr "Nazwa bota       [+ = uruchomiony, X - nie uruchomiony]"
+
+#: /home/boogie/giana/giana.tcl:251
+msgid "Giana has been installed in crontab."
+msgstr "Giana zosta³a zainstalowana w crontabie."
+
+#: /home/boogie/giana/giana.tcl:253
+msgid "Error while installing giana in crontab: %0"
+msgstr "B³±d podczas instalowania giany w crontabie: %0"
+
+#: /home/boogie/giana/giana.tcl:312
+msgid "Bot files has been removed."
+msgstr "Pliki bota zosta³y usuniête."
+
+#: /home/boogie/giana/giana.tcl:376
+msgid "Bot %0 is already up with PID %1."
+msgstr "Bot %0 jest juz uruchomiony z PIDem %1."
+
+#: /home/boogie/giana/giana.tcl:390
+msgid "Giana hasn't started."
+msgstr "Giana nie wystartowa³a."
+
+#: /home/boogie/giana/giana.tcl:440
+msgid "Run bot in debug mode. Error messages will be logged in %0."
+msgstr "Bot uruchomiony w trybie debugowania. Wiadomo¶ci b³êdów bêd± logowane w %0."
+
+#: /home/boogie/giana/giana.tcl:441
+msgid "You can read them by %0."
+msgstr "Mo¿esz je przeczytaæ komend± %0."
+
+#: /home/boogie/giana/giana.tcl:447
+msgid "Process successful sent to background."
+msgstr "Proces zosta³ wys³any w t³o."
+
+#: /home/boogie/giana/giana.tcl:448
+msgid "Process PID:"
+msgstr "PID procesu:"
+

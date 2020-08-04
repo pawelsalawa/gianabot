@@ -1,0 +1,34 @@
+*** Regular expression short description. ***
+
+Regular expression is used to match irc server data,
+so it's good to know it well. For full description
+go to TCL documentation. There are some aliases made
+for Giana, which enables glob-style matching for regexp.
+
+Following chars are supported in 'on' pattern:
+?               - matches exactly one char
+%               - matches exactly one word
+*               - matches 0, or more chars
+[any_chars]     - matches chars from
+                  inside of brackets
+[^any_chars]    - matches chars, which
+                  aren't inside brackets
+
+Examples:
+
+1.
+on {:% 367 % % *} {code...}
+Matches irc protocol message number 367. Also matches it
+only if after 367 are 2 words and meaby somthing more.
+
+2
+on {:%!%@% NOTICE [#!+]% :*} {code...}
+This pattern matches notices sent by some user
+(not server, becouse we match %!%@%, which can got
+only users) to channel, which isn't &channel (becouse
+there is no & char inside [] brackets). Notice data
+can be everything becouse of *. &channels aren't useful
+for simple users, so notices from that channels aren't
+welcome. If there are channels which starts with another
+char than #, !, or +, then you can use [^&] to match
+any channels which don't starts with &.
